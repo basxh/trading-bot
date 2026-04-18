@@ -174,3 +174,61 @@
 2026-04-19 00:55:53,434 - __main__ - INFO - Running paper trading simulation on 62 data points...
 2026-04-19 00:55:53,437 - paper_trader - INFO - Portfolio summary saved to reports/paper_trading_AAPL_sma_crossover_20260419_005553.json
 2026-04-19 00:55:53,437 - __main__ - INFO - Paper trading complete!
+2026-04-19 01:08:23,376 - __main__ - INFO - ============================================================
+2026-04-19 01:08:23,376 - __main__ - INFO - STARTING PAPER TRADING MODE
+2026-04-19 01:08:23,376 - __main__ - INFO - ============================================================
+2026-04-19 01:08:23,376 - __main__ - INFO - Symbol: PLTR
+2026-04-19 01:08:23,376 - __main__ - INFO - Strategy: mean_reversion
+2026-04-19 01:08:23,376 - __main__ - INFO - Interval: 1d
+2026-04-19 01:08:23,381 - paper_trader - INFO - Database initialized at data/paper_trades_PLTR_mean_reversion.db
+2026-04-19 01:08:23,381 - paper_trader - INFO - Paper trader initialized with $10,000.00
+2026-04-19 01:08:23,381 - __main__ - INFO - Fetching market data...
+2026-04-19 01:08:23,381 - data_fetcher - INFO - Fetching PLTR from Yahoo Finance (1d)
+2026-04-19 01:08:23,750 - data_fetcher - INFO - Fetched 62 rows for PLTR
+2026-04-19 01:08:23,750 - __main__ - INFO - Running paper trading simulation on 62 data points...
+2026-04-19 01:08:23,758 - paper_trader - INFO - BUY 69.0658 PLTR @ $137.55 | Cash: $490.50
+2026-04-19 01:08:23,758 - __main__ - ERROR - Error: 'PaperTrader' object has no attribute 'update_price'
+Traceback (most recent call last):
+  File "/data/.openclaw/workspace/projects/trading-bot/trading_bot.py", line 402, in main
+    run_paper_mode(args, config, logger)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "/data/.openclaw/workspace/projects/trading-bot/trading_bot.py", line 196, in run_paper_mode
+    trader.update_price(symbol, price)
+    ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'PaperTrader' object has no attribute 'update_price'. Did you mean: 'update_prices'?
+2026-04-19 01:08:53,070 - __main__ - INFO - ============================================================
+2026-04-19 01:08:53,070 - __main__ - INFO - STARTING PAPER TRADING MODE
+2026-04-19 01:08:53,070 - __main__ - INFO - ============================================================
+2026-04-19 01:08:53,070 - __main__ - INFO - Symbol: PLTR
+2026-04-19 01:08:53,070 - __main__ - INFO - Strategy: mean_reversion
+2026-04-19 01:08:53,070 - __main__ - INFO - Interval: 1d
+2026-04-19 01:08:53,075 - paper_trader - INFO - Database initialized at data/paper_trades_PLTR_mean_reversion.db
+2026-04-19 01:08:53,075 - paper_trader - INFO - Paper trader initialized with $10,000.00
+2026-04-19 01:08:53,075 - __main__ - INFO - Fetching market data...
+2026-04-19 01:08:53,075 - data_fetcher - INFO - Fetching PLTR from Yahoo Finance (1d)
+2026-04-19 01:08:53,499 - data_fetcher - INFO - Fetched 62 rows for PLTR
+2026-04-19 01:08:53,500 - __main__ - INFO - Running paper trading simulation on 62 data points...
+2026-04-19 01:08:53,508 - paper_trader - INFO - BUY 69.0658 PLTR @ $137.55 | Cash: $490.50
+2026-04-19 01:08:53,510 - paper_trader - INFO - SELL 69.0658 PLTR @ $130.49 | P&L: $-496.62 | Cash: $9493.88
+2026-04-19 01:08:53,512 - paper_trader - INFO - BUY 70.4294 PLTR @ $128.06 | Cash: $465.67
+2026-04-19 01:08:53,513 - paper_trader - INFO - SELL 70.4294 PLTR @ $146.39 | P&L: $+1280.66 | Cash: $10765.53
+2026-04-19 01:08:53,514 - paper_trader - INFO - Portfolio summary saved to reports/paper_trading_PLTR_mean_reversion_20260419_010853.json
+2026-04-19 01:08:53,514 - __main__ - INFO - Paper trading complete!
+2026-04-19 01:09:38,212 - __main__ - INFO - ============================================================
+2026-04-19 01:09:38,213 - __main__ - INFO - STARTING PAPER TRADING MODE
+2026-04-19 01:09:38,213 - __main__ - INFO - ============================================================
+2026-04-19 01:09:38,213 - __main__ - INFO - Symbol: PLTR
+2026-04-19 01:09:38,213 - __main__ - INFO - Strategy: mean_reversion
+2026-04-19 01:09:38,213 - __main__ - INFO - Interval: 1d
+2026-04-19 01:09:38,217 - paper_trader - INFO - Database initialized at data/paper_trades_PLTR_mean_reversion.db
+2026-04-19 01:09:38,217 - paper_trader - INFO - Paper trader initialized with $10,000.00
+2026-04-19 01:09:38,217 - __main__ - INFO - Fetching market data...
+2026-04-19 01:09:38,217 - data_fetcher - INFO - Fetching PLTR from Yahoo Finance (1d)
+2026-04-19 01:09:38,623 - data_fetcher - INFO - Fetched 62 rows for PLTR
+2026-04-19 01:09:38,623 - __main__ - INFO - Running paper trading simulation on 62 data points...
+2026-04-19 01:09:38,631 - paper_trader - INFO - BUY 69.0658 PLTR @ $137.55 | Cash: $490.50
+2026-04-19 01:09:38,633 - paper_trader - INFO - SELL 69.0658 PLTR @ $130.49 | P&L: $-496.62 | Cash: $9493.88
+2026-04-19 01:09:38,634 - paper_trader - INFO - BUY 70.4294 PLTR @ $128.06 | Cash: $465.67
+2026-04-19 01:09:38,636 - paper_trader - INFO - SELL 70.4294 PLTR @ $146.39 | P&L: $+1280.66 | Cash: $10765.53
+2026-04-19 01:09:38,636 - paper_trader - INFO - Portfolio summary saved to reports/paper_trading_PLTR_mean_reversion_20260419_010938.json
+2026-04-19 01:09:38,636 - __main__ - INFO - Paper trading complete!

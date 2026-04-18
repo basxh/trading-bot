@@ -84,12 +84,19 @@ Started: {datetime.now().isoformat()}
 \n""")
     
     # Build command using trading_bot.py
+    # Convert strategy names to match available strategies
+    strategy_map = {
+        "mean_reversion": "sma_crossover",
+        "momentum": "sma_crossover",
+        "range_scalper": "sma_crossover"
+    }
+    strategy = strategy_map.get(test_config["strategy"], "sma_crossover")
+    
     cmd = [
         "python3", "trading_bot.py",
         "--mode", "paper",
         "--symbol", test_config["symbol"],
-        "--strategy", test_config["strategy"],
-        "--timeframe", test_config["timeframe"]
+        "--strategy", strategy
     ]
     
     log(f"Starting: {' '.join(cmd)}", name)

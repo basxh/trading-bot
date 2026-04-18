@@ -193,7 +193,7 @@ def run_paper_mode(args: argparse.Namespace, config: Dict[str, Any], logger: log
         trade = trader.execute_signal(symbol, signal, price, notes=f"Paper trade: {strategy_name}")
         
         # Update position with current price
-        trader.update_price(symbol, price)
+        trader.update_prices({symbol: price})
     
     # Print final portfolio
     trader.print_portfolio()

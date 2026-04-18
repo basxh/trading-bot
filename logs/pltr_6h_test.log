@@ -1,0 +1,31 @@
+=== PLTR 6-Hour Periodic Paper Trading Test ===
+Symbol: PLTR
+Strategy: mean_reversion
+Started: 2026-04-19T01:09:37.571974
+Duration: 6 hours
+Run Interval: 30 minutes
+
+[2026-04-19 01:09:37] ======================================================================
+[2026-04-19 01:09:37] PLTR 6-HOUR PERIODIC PAPER TRADING TEST
+[2026-04-19 01:09:37] ======================================================================
+[2026-04-19 01:09:37] Symbol: PLTR
+[2026-04-19 01:09:37] Strategy: mean_reversion
+[2026-04-19 01:09:37] Duration: 6 hours
+[2026-04-19 01:09:37] Run interval: Every 30 minutes
+[2026-04-19 01:09:37] Log file: /data/.openclaw/workspace/projects/trading-bot/logs/pltr_6h_test.log
+[2026-04-19 01:09:37] Report file: /data/.openclaw/workspace/projects/trading-bot/reports/pltr_6h_report.json
+[2026-04-19 01:09:37] Database: /data/.openclaw/workspace/projects/trading-bot/data/paper_trades_PLTR_mean_reversion.db
+[2026-04-19 01:09:37] ======================================================================
+[2026-04-19 01:09:37] 
+Start time: 2026-04-19 01:09:37
+[2026-04-19 01:09:37] End time: 2026-04-19 07:09:37
+[2026-04-19 01:09:37] ======================================================================
+[2026-04-19 01:09:37] 
+======================================================================
+[2026-04-19 01:09:37] ITERATION #1 - Hour 0.00/6
+[2026-04-19 01:09:37] ======================================================================
+[2026-04-19 01:09:37] Running bot...
+[2026-04-19 01:09:38] ✅ Bot completed successfully
+[2026-04-19 01:09:38] 
+⏱️  Next run at: 01:39:38
+[2026-04-19 01:09:38]    Sleeping for 30 minutes...

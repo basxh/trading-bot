@@ -34,13 +34,19 @@ def run_strategy_test(strategy_name: str, strategy_class, symbol: str, timeframe
         # Determine market type
         market_type = 'crypto' if symbol in ['BTC-USD', 'BTCUSDT', 'ETH-USD', 'ETHUSDT'] else 'stock'
         
-        # Fetch data
-        data = fetcher.fetch(
-            symbol=symbol,
-            market_type=market_type,
-            interval=timeframe,
-            period=f"{days}d"
-        )
+        # Fetch data with appropriate params
+        if market_type == 'stock':
+            data = fetcher.fetch_yahoo_finance(
+                symbol=symbol,
+                interval=timeframe,
+                period=f"{days}d"
+            )
+        else:
+            data = fetcher.fetch_binance(
+                symbol=symbol,
+                interval=timeframe,
+                limit=min(days * 24, 1000)  # Approximate for hourly data
+            )
         
         if data is None or len(data) == 0:
             print(f"⚠️  No data available for {symbol}")
@@ -82,13 +88,15 @@ def main():
     print("  Testing: Mean Reversion, Momentum Breakout, Range Scalper")
     print("="*70 + "\n")
     
-    # Test symbols
-    symbols = {
-        'TSLA': '1h',
-        'BTCUSDT': '1h',
-    }
+    # Test configurations: (symbol, timeframe, days)
+    test_configs = [
+        ('TSLA', '1h', 30),      # Stock, hourly
+        ('TSLA', '15m', 30),     # Stock, 15min
+        ('BTCUSDT', '1h', 30),   # Crypto, hourly
+        ('BTCUSDT', '15m', 30),  # Crypto, 15min
+    ]
     
-    # Strategies to test
+    # Strategies to test with their preferred timeframes
     strategies = {
         'Mean_Reversion': MeanReversionStrategy,
         'Momentum_Breakout': MomentumBreakoutStrategy,
@@ -97,9 +105,9 @@ def main():
     
     all_results = []
     
-    for symbol, tf in symbols.items():
+    for symbol, tf, days in test_configs:
         print(f"\n\n{'#'*70}")
-        print(f"# Testing Symbol: {symbol}")
+        print(f"# Testing Symbol: {symbol} ({tf})")
         print(f"{'#'*70}")
         
         for strat_name, strat_class in strategies.items():

@@ -12,3 +12,30 @@
 [2026-04-19 01:05:46] [MAIN] MONITORING: 3 tests for 360 minutes
 [2026-04-19 01:05:46] [MAIN] Status updates every 15 minutes
 [2026-04-19 01:05:46] [MAIN] ======================================================================
+[2026-04-19 01:05:56] [MAIN] 
+✅ ALL TESTS COMPLETED!
+[2026-04-19 01:05:56] [MAIN] 
+======================================================================
+[2026-04-19 01:05:56] [MAIN] GENERATING FINAL REPORT
+[2026-04-19 01:05:56] [MAIN] ======================================================================
+[2026-04-19 01:05:56] [MAIN] 
+✅ Report saved: /data/.openclaw/workspace/projects/trading-bot/reports/multi_asset_report_20260419_010556.json
+[2026-04-19 01:05:56] [MAIN] 
+======================================================================
+[2026-04-19 01:05:56] [MAIN] RESULTS SUMMARY
+[2026-04-19 01:05:56] [MAIN] ======================================================================
+[2026-04-19 01:05:56] [MAIN] 
+📊 PLTR (PLTR) - mean_reversion
+[2026-04-19 01:05:56] [MAIN]    Timeframe: 1h | Capital: $10000
+[2026-04-19 01:05:56] [MAIN]    ⚠️  Errors detected in output
+[2026-04-19 01:05:56] [MAIN] 
+📊 ETH (ETH-USD) - momentum
+[2026-04-19 01:05:56] [MAIN]    Timeframe: 15min | Capital: $10000
+[2026-04-19 01:05:56] [MAIN]    ⚠️  Errors detected in output
+[2026-04-19 01:05:56] [MAIN] 
+📊 BTC (BTC-USD) - range_scalper
+[2026-04-19 01:05:56] [MAIN]    Timeframe: 15min | Capital: $10000
+[2026-04-19 01:05:56] [MAIN]    ⚠️  Errors detected in output
+[2026-04-19 01:05:56] [MAIN] 
+🎉 Multi-asset test run completed!
+[2026-04-19 01:05:56] [MAIN] ======================================================================

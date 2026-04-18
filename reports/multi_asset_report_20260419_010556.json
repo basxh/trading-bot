@@ -1,0 +1,29 @@
+{
+  "timestamp": "2026-04-19T01:05:56.448302",
+  "tests": {
+    "PLTR": {
+      "symbol": "PLTR",
+      "strategy": "mean_reversion",
+      "timeframe": "1h",
+      "capital": 10000,
+      "log_file": "/data/.openclaw/workspace/projects/trading-bot/logs/test_pltr_6h.log",
+      "log_content": "=== PLTR Paper Trading Test ===\nSymbol: PLTR\nStrategy: mean_reversion\nTimeframe: 1h\nCapital: $10000\nStarted: 2026-04-19T01:05:46.433440\n\nusage: trading_bot.py [-h] [--mode {backtest,paper,live}] [--symbol SYMBOL]\n                      [--strategy STRATEGY] [--interval INTERVAL]\n                      [--config CONFIG] [--save-report] [--save-data] [--plot]\n                      [--list-strategies]\ntrading_bot.py: error: unrecognized arguments: --timeframe 1h\n"
+    },
+    "ETH": {
+      "symbol": "ETH-USD",
+      "strategy": "momentum",
+      "timeframe": "15min",
+      "capital": 10000,
+      "log_file": "/data/.openclaw/workspace/projects/trading-bot/logs/test_eth_6h.log",
+      "log_content": "=== ETH Paper Trading Test ===\nSymbol: ETH-USD\nStrategy: momentum\nTimeframe: 15min\nCapital: $10000\nStarted: 2026-04-19T01:05:46.437716\n\nusage: trading_bot.py [-h] [--mode {backtest,paper,live}] [--symbol SYMBOL]\n                      [--strategy STRATEGY] [--interval INTERVAL]\n                      [--config CONFIG] [--save-report] [--save-data] [--plot]\n                      [--list-strategies]\ntrading_bot.py: error: unrecognized arguments: --timeframe 15min\n"
+    },
+    "BTC": {
+      "symbol": "BTC-USD",
+      "strategy": "range_scalper",
+      "timeframe": "15min",
+      "capital": 10000,
+      "log_file": "/data/.openclaw/workspace/projects/trading-bot/logs/test_btc_6h.log",
+      "log_content": "=== BTC Paper Trading Test ===\nSymbol: BTC-USD\nStrategy: range_scalper\nTimeframe: 15min\nCapital: $10000\nStarted: 2026-04-19T01:05:46.443641\n\nusage: trading_bot.py [-h] [--mode {backtest,paper,live}] [--symbol SYMBOL]\n                      [--strategy STRATEGY] [--interval INTERVAL]\n                      [--config CONFIG] [--save-report] [--save-data] [--plot]\n                      [--list-strategies]\ntrading_bot.py: error: unrecognized arguments: --timeframe 15min\n"
+    }
+  }
+}

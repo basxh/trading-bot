@@ -5,3 +5,8 @@ Timeframe: 1h
 Capital: $10000
 Started: 2026-04-19T01:05:46.433440
 
+usage: trading_bot.py [-h] [--mode {backtest,paper,live}] [--symbol SYMBOL]
+                      [--strategy STRATEGY] [--interval INTERVAL]
+                      [--config CONFIG] [--save-report] [--save-data] [--plot]
+                      [--list-strategies]
+trading_bot.py: error: unrecognized arguments: --timeframe 1h

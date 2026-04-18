@@ -1,0 +1,30 @@
+2026-04-19 01:08:05,863 - INFO - ============================================================
+2026-04-19 01:08:05,863 - INFO - BTC 6H PAPER TRADING TEST - STARTING
+2026-04-19 01:08:05,863 - INFO - ============================================================
+2026-04-19 01:08:05,863 - INFO - Symbol: BTC-USD
+2026-04-19 01:08:05,863 - INFO - Strategy: range_scalper
+2026-04-19 01:08:05,863 - INFO - Duration: 6 hours
+2026-04-19 01:08:05,863 - INFO - Log Interval: 15 minutes
+2026-04-19 01:08:05,863 - INFO - ============================================================
+2026-04-19 01:08:05,863 - INFO - Start Time: 2026-04-19 01:08:05.863527
+2026-04-19 01:08:05,863 - INFO - End Time: 2026-04-19 07:08:05.863527
+2026-04-19 01:08:05,863 - INFO - ============================================================
+2026-04-19 01:08:05,864 - INFO - Database initialized at data/paper_trades_BTC-USD_range_scalper.db
+2026-04-19 01:08:05,864 - INFO - Paper trader initialized with $10,000.00
+2026-04-19 01:08:05,864 - INFO - Initialized strategy: RangeScalperStrategy
+2026-04-19 01:08:05,864 - INFO - Starting trading loop...
+2026-04-19 01:08:06,141 - INFO - Fetching BTCUSD from Binance (1m)
+2026-04-19 01:08:06,401 - INFO - Fetched 500 rows for BTCUSD
+2026-04-19 01:09:06,472 - INFO - Fetching BTCUSD from Binance (1m)
+2026-04-19 01:09:06,713 - INFO - Fetched 500 rows for BTCUSD
+2026-04-19 01:10:06,772 - INFO - Fetching BTCUSD from Binance (1m)
+2026-04-19 01:10:07,012 - INFO - Fetched 500 rows for BTCUSD
+2026-04-19 01:11:07,075 - INFO - Fetching BTCUSD from Binance (1m)
+2026-04-19 01:11:07,316 - INFO - Fetched 500 rows for BTCUSD
+2026-04-19 01:12:07,390 - INFO - Fetching BTCUSD from Binance (1m)
+2026-04-19 01:12:07,630 - INFO - Fetched 500 rows for BTCUSD
+2026-04-19 01:12:07,695 - INFO - Running... 5.9h remaining | Portfolio: $10,000.00
+2026-04-19 01:13:07,695 - INFO - Fetching BTCUSD from Binance (1m)
+2026-04-19 01:13:07,958 - INFO - Fetched 500 rows for BTCUSD
+2026-04-19 01:14:08,022 - INFO - Fetching BTCUSD from Binance (1m)
+2026-04-19 01:14:08,262 - INFO - Fetched 500 rows for BTCUSD
