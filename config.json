@@ -1,0 +1,46 @@
+{
+  "general": {
+    "symbol": "AAPL",
+    "market_type": "stock",
+    "timezone": "America/New_York"
+  },
+  "data": {
+    "interval": "1d",
+    "period": "2y",
+    "save_path": "data/"
+  },
+  "strategy": {
+    "name": "sma_crossover",
+    "params": {
+      "sma_short": 50,
+      "sma_long": 200,
+      "rsi_period": 14,
+      "rsi_overbought": 70,
+      "rsi_oversold": 30
+    }
+  },
+  "backtest": {
+    "initial_capital": 10000,
+    "commission": 0.001,
+    "slippage": 0.0005
+  },
+  "paper_trading": {
+    "initial_capital": 10000,
+    "commission": 0.001,
+    "check_interval": 60
+  },
+  "live_trading": {
+    "enabled": false,
+    "broker": "alpaca",
+    "api_key": "",
+    "api_secret": "",
+    "paper": true,
+    "max_position_size": 0.2,
+    "max_daily_loss": 500,
+    "stop_loss_pct": 0.02
+  },
+  "logging": {
+    "level": "INFO",
+    "file": "logs/trading_bot.log"
+  }
+}
