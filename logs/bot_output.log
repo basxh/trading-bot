@@ -1,0 +1,24 @@
+2026-04-19 00:49:04,250 - __main__ - INFO - ============================================================
+2026-04-19 00:49:04,250 - __main__ - INFO - STARTING PAPER TRADING MODE
+2026-04-19 00:49:04,250 - __main__ - INFO - ============================================================
+2026-04-19 00:49:04,250 - __main__ - INFO - Symbol: AAPL
+2026-04-19 00:49:04,250 - __main__ - INFO - Strategy: sma_crossover
+2026-04-19 00:49:04,250 - __main__ - INFO - Interval: 1d
+2026-04-19 00:49:04,251 - paper_trader - INFO - Database initialized at data/paper_trades_AAPL_sma_crossover.db
+2026-04-19 00:49:04,251 - paper_trader - INFO - Paper trader initialized with $10,000.00
+2026-04-19 00:49:04,251 - __main__ - INFO - Fetching market data...
+2026-04-19 00:49:04,251 - data_fetcher - INFO - Fetching AAPL from Yahoo Finance (1d)
+2026-04-19 00:49:04,734 - data_fetcher - INFO - Fetched 62 rows for AAPL
+2026-04-19 00:49:04,734 - __main__ - INFO - Running paper trading simulation on 62 data points...
+
+============================================================
+📊 PAPER TRADING PORTFOLIO
+============================================================
+💰 Cash:           $10,000.00
+📈 Total Value:    $10,000.00
+💵 Initial:        $10,000.00
+📊 Total P&L:      $+0.00 (+0.00%)
+🔄 Trades:         0
+============================================================
+2026-04-19 00:49:04,738 - paper_trader - INFO - Portfolio summary saved to reports/paper_trading_AAPL_sma_crossover_20260419_004904.json
+2026-04-19 00:49:04,738 - __main__ - INFO - Paper trading complete!

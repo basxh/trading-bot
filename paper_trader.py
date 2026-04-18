@@ -3,6 +3,7 @@ Paper Trading Module - Simulated trading with virtual portfolio
 Stores trades in SQLite database for persistence
 """
 import os
+import sys
 import json
 import logging
 import sqlite3
@@ -11,7 +12,11 @@ from typing import Dict, List, Optional, Any
 from dataclasses import dataclass, asdict
 import pandas as pd
 
-from strategies import BaseStrategy
+# Add parent directory to path for imports
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from strategies import BaseStrategy, MeanReversionStrategy, MomentumBreakoutStrategy, RangeScalperStrategy
+from risk_management import PositionSizer, StopLossManager, PortfolioRiskManager, RiskParams, RiskCalculator
 
 
 @dataclass
@@ -69,7 +74,12 @@ class PaperTrader:
     def __init__(self, 
                  initial_capital: float = 10000.0,
                  commission: float = 0.001,
-                 db_path: str = "data/paper_trades.db"):
+                 db_path: str = "data/paper_trades.db",
+                 use_risk_management: bool = True,
+                 max_position_pct: float = 0.2,
+                 stop_loss_pct: float = 0.02,
+                 trailing_stop_pct: float = 0.03,
+                 take_profit_pct: float = 0.05):
         """
         Initialize paper trader.
         
@@ -77,6 +87,11 @@ class PaperTrader:
             initial_capital (float): Starting virtual balance
             commission (float): Commission rate per trade
             db_path (str): Path to SQLite database
+            use_risk_management (bool): Enable risk management
+            max_position_pct (float): Max position size as % of portfolio
+            stop_loss_pct (float): Stop loss percentage
+            trailing_stop_pct (float): Trailing stop percentage
+            take_profit_pct (float): Take profit percentage
         """
         self.initial_capital = initial_capital
         self.commission = commission
@@ -87,6 +102,23 @@ class PaperTrader:
         self.cash = initial_capital
         self.positions: Dict[str, Position] = {}
         self.trade_history: List[Trade] = []
+        
+        # Risk management
+        self.use_risk_management = use_risk_management
+        if use_risk_management:
+            risk_params = RiskParams(
+                max_position_pct=max_position_pct,
+                stop_loss_pct=stop_loss_pct,
+                trailing_stop_pct=trailing_stop_pct,
+                take_profit_pct=take_profit_pct
+            )
+            self.position_sizer = PositionSizer(risk_params)
+            self.stop_manager = StopLossManager(risk_params)
+            self.portfolio_risk = PortfolioRiskManager(risk_params)
+        else:
+            self.position_sizer = None
+            self.stop_manager = None
+            self.portfolio_risk = None
         
         # Ensure directory exists
         os.makedirs(os.path.dirname(db_path) or '.', exist_ok=True)
@@ -295,10 +327,72 @@ class PaperTrader:
         
         return trade
     
-    def update_price(self, symbol: str, price: float):
-        """Update position with current market price."""
-        if symbol in self.positions:
-            self.positions[symbol].update_price(price)
+    def buy_with_atr(self, symbol: str, price: float, atr: float,
+                     position_pct: float = 0.95, notes: str = "") -> Optional[Trade]:
+        """
+        Execute buy order with ATR-based position sizing.
+        
+        Args:
+            symbol (str): Trading symbol
+            price (float): Current price
+            atr (float): Average True Range
+            position_pct (float): Position percentage
+            notes (str): Trade notes
+            
+        Returns:
+            Trade: Trade record or None
+        """
+        if self.position_sizer:
+            quantity = self.position_sizer.atr_based_sizing(
+                self.cash, price, atr, risk_per_trade_pct=0.01
+            )
+        else:
+            max_position_value = self.cash * position_pct
+            quantity = max_position_value / price
+        
+        trade = self.buy(symbol, price, quantity, notes=notes)
+        
+        # Add to stop manager
+        if trade and self.stop_manager:
+            self.stop_manager.add_position(symbol, price, trade.quantity)
+        
+        return trade
+    
+    def check_stops(self, symbol: str, current_price: float) -> Optional[str]:
+        """
+        Check if stop loss or take profit triggered.
+        
+        Args:
+            symbol (str): Trading symbol
+            current_price (float): Current price
+            
+        Returns:
+            str: Action to take or None
+        """
+        if not self.stop_manager:
+            return None
+        
+        action = self.stop_manager.update_price(symbol, current_price)
+        
+        if action:
+            notes = f"Stop triggered: {action}"
+            self.sell(symbol, current_price, notes=notes)
+            self.stop_manager.remove_position(symbol)
+            return action
+        
+        return None
+    
+    def update_prices(self, prices: Dict[str, float]):
+        """
+        Update all positions with current prices and check stops.
+        
+        Args:
+            prices (dict): Current prices by symbol
+        """
+        for symbol, price in prices.items():
+            if symbol in self.positions:
+                self.positions[symbol].update_price(price)
+                self.check_stops(symbol, price)
     
     def get_position(self, symbol: str) -> Optional[Position]:
         """Get current position for symbol."""

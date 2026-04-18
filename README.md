@@ -6,15 +6,19 @@ Ein modulärer Trading Bot in Python für Backtesting, Paper Trading und Live Tr
 
 ```
 trading-bot/
-├── trading_bot.py       # Haupt-Script mit CLI
-├── config.json          # Konfigurationsdatei
-├── data_fetcher.py      # Marktdaten-Modul
-├── strategies.py        # Strategie-Modul
-├── backtest.py          # Backtest-Modul
-├── paper_trader.py      # Paper Trading Modul
-├── live_trader.py       # Live Trading Vorbereitung
-├── requirements.txt     # Python Abhängigkeiten
-└── README.md           # Diese Datei
+├── trading_bot.py            # Haupt-Script mit CLI
+├── config.json               # Konfigurationsdatei
+├── data_fetcher.py           # Marktdaten-Modul
+├── strategies.py             # Strategie-Modul
+├── backtest.py               # Backtest-Modul
+├── paper_trader.py           # Paper Trading Modul
+├── live_trader.py            # Live Trading Vorbereitung
+├── risk_management.py        # 🆕 Risk Management Module
+├── optimizer.py              # 🆕 Parameter Optimierung
+├── performance_analyzer.py   # 🆕 Performance Analytics
+├── ml_trainer.py             # 🆕 ML Feature Engineering
+├── requirements.txt          # Python Abhängigkeiten
+└── README.md                 # Diese Datei
 ```
 
 ## ✨ Features
@@ -29,8 +33,42 @@ trading-bot/
 - Basis-Klasse für einfache Erweiterung
 - **SMA Crossover**: Golden Cross / Death Cross Strategie
 - **RSI**: Overbought/Oversold Strategie
+- **MACD**: Moving Average Convergence Divergence Strategie
+- **Bollinger**: Bollinger Bands Strategie
+- **VWAP**: Volume Weighted Average Price Strategie
 - **Combined**: Kombination aus SMA + RSI
+- **Multi-Indicator**: Kombinierte Strategie mit mehreren Indikatoren
 - Einfach erweiterbar für eigene Strategien
+
+### 🛡️ Risk Management (`risk_management.py`)
+- **ATR-basierte Positionssizing**: Volatilitätsabhängige Positionsgröße
+- **Trailing Stop Loss**: Bewegt sich mit dem Gewinn
+- **Kelly Criterion**: Optimale Positionsgröße basiernd auf Edge
+- **Portfolio Risk Management**: Drawdown- und Daily Loss Limits
+- **Stop Loss Management**: Automatisches Stop-Verlust-Tracking
+
+### 📈 Performance Analytics (`performance_analyzer.py`)
+- **Sharpe Ratio**: Risikoadjustierte Rendite
+- **Sortino Ratio**: Nur Downside-Risiko
+- **Calmar Ratio**: Rendite / Max Drawdown
+- **Value at Risk (VaR)**: 95% und 99% Konfidenzniveau
+- **Conditional VaR**: Expected Shortfall
+- **Trade Statistics**: Gewinnrate, Profit Factor, Expectancy
+- **Equity Curve Visualization**: Visualisierung mit matplotlib
+
+### 🔧 Parameter Optimierung (`optimizer.py`)
+- **Grid Search**: Testet verschiedene Parameter-Kombinationen
+- **SMA Optimization**: Optimale SMA-Perioden finden
+- **RSI Optimization**: Beste Overbought/Oversold Levels
+- **Multi-Parameter**: Kombinierte Strategie-Optimierung
+- **JSON Reports**: Speichert alle Testergebnisse
+
+### 🤖 Machine Learning (`ml_trainer.py`)
+- **Feature Engineering**: 50+ technische Indikatoren
+- **Returns Features**: 1d, 5d, 10d, 20d Renditen
+- **Volatility Features**: ATR, Standardabweichung
+- **Target Creation**: Next-Day Return Klassifikation
+- **CSV Export**: Trainingsdaten für externe ML-Modelle
 
 ### 📈 Backtest-Modul (`backtest.py`)
 - Tests Strategien an historischen Daten
@@ -49,6 +87,7 @@ trading-bot/
 - SQLite Datenbank für Trade-History
 - P&L Tracking (realisiert + unrealisiert)
 - Portfoliobewertung in Echtzeit
+- 🆕 Integriertes Risk Management (Stops, Position Sizing)
 
 ### 🔴 Live Trading Vorbereitung (`live_trader.py`)
 - Gleiche Schnittstelle wie Paper Trader
@@ -60,6 +99,7 @@ trading-bot/
   - Daily Loss Limit
   - Stop Loss
 - Paper/Live Modus konfigurierbar
+- 🆕 Integriertes Risk Management
 
 ### 🎛️ CLI Interface (`trading_bot.py`)
 ```bash
@@ -129,7 +169,19 @@ Die `config.json` Datei enthält alle Einstellungen:
     "paper": true,              // true = Paper, false = Live
     "max_position_size": 0.2,   // Max 20% des Portfolios
     "max_daily_loss": 500,      // Max $500 Verlust/Tag
-    "stop_loss_pct": 0.02       // 2% Stop Loss
+    "stop_loss_pct": 0.02,      // 2% Stop Loss
+    "trailing_stop_pct": 0.03,  // 3% Trailing Stop
+    "take_profit_pct": 0.05     // 5% Take Profit
+  },
+  "risk_management": {
+    "use_risk_management": true,
+    "max_position_pct": 0.2,
+    "stop_loss_pct": 0.02,
+    "trailing_stop_pct": 0.03,
+    "take_profit_pct": 0.05,
+    "max_daily_loss": 500,
+    "max_drawdown_pct": 0.10,
+    "kelly_fraction": 0.5
   },
   "logging": {
     "level": "INFO",
@@ -162,6 +214,37 @@ Output:
 ║  Sharpe Ratio:        1.56
 ║  Volatility (Ann.):   15.23%
 ╚══════════════════════════════════════════════════════════════╝
+```
+
+### Parameter Optimierung
+
+```bash
+# SMA Parameter optimieren
+python optimizer.py --symbol AAPL --strategy sma_crossover --days 365 --metric sharpe_ratio
+
+# RSI Parameter optimieren
+python optimizer.py --symbol AAPL --strategy rsi --days 365 --metric profit_factor
+
+# Ergebnisse werden in optimization_results/ gespeichert
+```
+
+### Performance Analytics
+
+```bash
+# Backtest-Results analysieren
+python performance_analyzer.py --backtest-results results.json --save-report report.txt --save-plot equity.png
+```
+
+### ML Feature Engineering
+
+```bash
+# ML Trainingsdaten vorbereiten
+python ml_trainer.py --symbol AAPL --days 365 --forecast-horizon 1
+
+# Erzeugt:
+# - ml_data/AAPL/train_1d_*.csv
+# - ml_data/AAPL/test_1d_*.csv
+# - ml_data/AAPL/features_1d_*.csv
 ```
 
 ### Paper Trading
@@ -232,6 +315,11 @@ class My_Strategy(BaseStrategy):
 STRATEGIES = {
     'sma_crossover': SMA_Crossover_Strategy,
     'rsi': RSI_Strategy,
+    'macd': MACD_Strategy,
+    'bollinger': Bollinger_Strategy,
+    'vwap': VWAP_Strategy,
+    'combined': Combined_Strategy,
+    'multi_indicator': Multi_Indicator_Strategy,
     'my_strategy': My_Strategy  # Deine Strategie
 }
 ```
@@ -260,6 +348,10 @@ python trading_bot.py --mode backtest --strategy my_strategy
 - **Max Position Size**: Verhindert übermäßige Positionen
 - **Daily Loss Limit**: Stoppt Trading nach Verlustlimit
 - **Stop Loss**: Automatische Verkäufe bei Verlusten
+- **Trailing Stop**: Bewegt sich mit Gewinn
+- **Take Profit**: Automatische Gewinnmitnahme
+- **Kelly Criterion**: Optimal Position Sizing
+- **ATR Sizing**: Volatilitätsbasierte Größen
 - **Paper Mode**: Testen ohne echtes Geld
 - **Konfirmation**: Live Trading erfordert manuelle Bestätigung
 
@@ -269,14 +361,26 @@ python trading_bot.py --mode backtest --strategy my_strategy
 - `data/paper_trades_*.db` - SQLite Datenbank mit Trades
 - `logs/trading_bot.log` - Ausführliches Logging
 - `reports/*` - Backtest Reports und Charts
+- `optimization_results/*.json` - Optimierungsergebnisse
+- `ml_data/*` - ML Trainingsdaten
 
 ## 🧪 Testing
 
 ```bash
 # Test mit verschiedenen Strategien
 python trading_bot.py --mode backtest --symbol AAPL --strategy sma_crossover --save-report --plot
-python trading_bot.py --mode backtest --symbol AAPL --strategy rsi --save-report --plot
-python trading_bot.py --mode backtest --symbol AAPL --strategy combined --save-report --plot
+python trading_bot.py --mode backtest --symbol AAPL --strategy macd --save-report --plot
+python trading_bot.py --mode backtest --symbol AAPL --strategy bollinger --save-report --plot
+python trading_bot.py --mode backtest --symbol AAPL --strategy multi_indicator --save-report --plot
+
+# Parameter Optimierung
+python optimizer.py --symbol AAPL --strategy sma_crossover --days 365
+
+# Performance Analyse
+python performance_analyzer.py --backtest-results reports/AAPL_sma_crossover.json
+
+# ML Data vorbereiten
+python ml_trainer.py --symbol AAPL --days 365
 
 # Crypto
 python trading_bot.py --mode backtest --symbol BTC-USD --market-type crypto --strategy sma_crossover
