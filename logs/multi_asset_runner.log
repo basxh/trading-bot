@@ -1,0 +1,14 @@
+[2026-04-19 01:05:46] [MAIN] ======================================================================
+[2026-04-19 01:05:46] [MAIN] MULTI-ASSET PAPER TRADING TEST RUNNER
+[2026-04-19 01:05:46] [MAIN] ======================================================================
+[2026-04-19 01:05:46] [PLTR] Starting: python3 trading_bot.py --mode paper --symbol PLTR --strategy mean_reversion --timeframe 1h
+[2026-04-19 01:05:46] [PLTR] PID: 9216
+[2026-04-19 01:05:46] [ETH] Starting: python3 trading_bot.py --mode paper --symbol ETH-USD --strategy momentum --timeframe 15min
+[2026-04-19 01:05:46] [ETH] PID: 9217
+[2026-04-19 01:05:46] [BTC] Starting: python3 trading_bot.py --mode paper --symbol BTC-USD --strategy range_scalper --timeframe 15min
+[2026-04-19 01:05:46] [BTC] PID: 9218
+[2026-04-19 01:05:46] [MAIN] 
+======================================================================
+[2026-04-19 01:05:46] [MAIN] MONITORING: 3 tests for 360 minutes
+[2026-04-19 01:05:46] [MAIN] Status updates every 15 minutes
+[2026-04-19 01:05:46] [MAIN] ======================================================================

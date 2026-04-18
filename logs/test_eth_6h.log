@@ -1,1 +1,7 @@
-nohup: failed to run command 'python': No such file or directory
+=== ETH Paper Trading Test ===
+Symbol: ETH-USD
+Strategy: momentum
+Timeframe: 15min
+Capital: $10000
+Started: 2026-04-19T01:05:46.437716
+
