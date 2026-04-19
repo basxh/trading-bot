@@ -775,6 +775,172 @@ class RangeScalperStrategy(BaseStrategy):
         return df
 
 
+class AdaptiveMomentumStrategy(BaseStrategy):
+    """
+    Adaptive Momentum Strategy - Arbeitet auch in Seitwärtsphasen.
+    
+    Kombiniert:
+    - ATR-basierte Breakouts (für Trend-Phasen)
+    - RSI-Mean-Reversion (für Seitwärtsphasen)
+    - Dynamische Marktregime-Erkennung (Trend vs Range)
+    """
+    
+    def __init__(self, params=None):
+        default_params = {
+            'atr_period': 14,
+            'sma_period': 20,
+            'atr_multiplier': 0.8,  # Aggressiver für mehr Trades
+            'trailing_stop_mult': 2.0,
+            'rsi_period': 14,
+            'rsi_oversold': 35,  # Höher für mehr Entries
+            'rsi_overbought': 65,  # Niedriger für mehr Exits
+            'trend_threshold': 0.02,  # 2% über/unter SMA für Trend
+            'allow_short': True,
+            'max_hold_bars': 20,  # Maximale Hold-Zeit
+        }
+        if params:
+            default_params.update(params)
+        super().__init__(default_params)
+    
+    def _calculate_atr(self, df, period):
+        high = df['high']
+        low = df['low']
+        close = df['close']
+        tr1 = high - low
+        tr2 = abs(high - close.shift(1))
+        tr3 = abs(low - close.shift(1))
+        tr = pd.concat([tr1, tr2, tr3], axis=1).max(axis=1)
+        return tr.rolling(window=period).mean()
+    
+    def _calculate_rsi(self, prices, period):
+        delta = prices.diff()
+        gains = delta.where(delta > 0, 0)
+        losses = -delta.where(delta < 0, 0)
+        avg_gains = gains.ewm(span=period, adjust=False).mean()
+        avg_losses = losses.ewm(span=period, adjust=False).mean()
+        rs = avg_gains / avg_losses
+        return 100 - (100 / (1 + rs))
+    
+    def generate_signals(self, data):
+        if not self.validate_data(data):
+            raise ValueError("Data missing required OHLCV columns")
+        
+        df = data.copy()
+        
+        # Indikatoren berechnen
+        df['sma'] = df['close'].rolling(window=self.params['sma_period']).mean()
+        df['atr'] = self._calculate_atr(df, self.params['atr_period'])
+        df['rsi'] = self._calculate_rsi(df['close'], self.params['rsi_period'])
+        
+        # Marktregime erkennen (Trend vs Range)
+        df['price_vs_sma_pct'] = (df['close'] - df['sma']) / df['sma']
+        df['in_uptrend'] = df['price_vs_sma_pct'] > self.params['trend_threshold']
+        df['in_downtrend'] = df['price_vs_sma_pct'] < -self.params['trend_threshold']
+        df['in_range'] = ~(df['in_uptrend'] | df['in_downtrend'])
+        
+        # Entry Levels
+        df['long_entry_breakout'] = df['sma'] + (df['atr'] * self.params['atr_multiplier'])
+        df['short_entry_breakout'] = df['sma'] - (df['atr'] * self.params['atr_multiplier'])
+        
+        # Trading Logik
+        df['signal'] = 0
+        df['position'] = 0
+        
+        current_position = 0
+        entry_price = 0
+        entry_bar = 0
+        bars_held = 0
+        highest_price = 0
+        lowest_price = float('inf')
+        
+        for i in range(len(df)):
+            if i < max(self.params['atr_period'], self.params['sma_period'], self.params['rsi_period']):
+                continue
+            
+            close = df['close'].iloc[i]
+            sma = df['sma'].iloc[i]
+            atr = df['atr'].iloc[i]
+            rsi = df['rsi'].iloc[i]
+            in_uptrend = df['in_uptrend'].iloc[i]
+            in_downtrend = df['in_downtrend'].iloc[i]
+            in_range = df['in_range'].iloc[i]
+            long_level = df['long_entry_breakout'].iloc[i]
+            short_level = df['short_entry_breakout'].iloc[i]
+            
+            bars_held += 1 if current_position != 0 else 0
+            
+            # EXIT LOGIK
+            if current_position == 1:
+                highest_price = max(highest_price, close)
+                trailing_stop = highest_price - (atr * self.params['trailing_stop_mult'])
+                
+                # Exit Gründe
+                exit_trailing = close < trailing_stop
+                exit_rsi = rsi > self.params['rsi_overbought']  # Overbought = verkaufen
+                exit_time = bars_held >= self.params['max_hold_bars']
+                
+                if exit_trailing or exit_rsi or exit_time:
+                    df.iloc[i, df.columns.get_loc('signal')] = -1
+                    current_position = 0
+                    bars_held = 0
+                    highest_price = 0
+                    
+            elif current_position == -1 and self.params['allow_short']:
+                lowest_price = min(lowest_price, close)
+                trailing_stop = lowest_price + (atr * self.params['trailing_stop_mult'])
+                
+                exit_trailing = close > trailing_stop
+                exit_rsi = rsi < self.params['rsi_oversold']  # Oversold = zurückkaufen
+                exit_time = bars_held >= self.params['max_hold_bars']
+                
+                if exit_trailing or exit_rsi or exit_time:
+                    df.iloc[i, df.columns.get_loc('signal')] = 1
+                    current_position = 0
+                    bars_held = 0
+                    lowest_price = float('inf')
+            
+            # ENTRY LOGIK
+            if current_position == 0:
+                # Trend-Phase: Breakout Trading
+                if in_uptrend and close > long_level:
+                    df.iloc[i, df.columns.get_loc('signal')] = 1
+                    current_position = 1
+                    entry_price = close
+                    entry_bar = i
+                    bars_held = 0
+                    highest_price = close
+                    
+                elif in_downtrend and self.params['allow_short'] and close < short_level:
+                    df.iloc[i, df.columns.get_loc('signal')] = -1
+                    current_position = -1
+                    entry_price = close
+                    entry_bar = i
+                    bars_held = 0
+                    lowest_price = close
+                    
+                # Range-Phase: Mean Reversion
+                elif in_range:
+                    if rsi < self.params['rsi_oversold']:
+                        # Oversold in Range = kaufen
+                        df.iloc[i, df.columns.get_loc('signal')] = 1
+                        current_position = 1
+                        entry_price = close
+                        entry_bar = i
+                        bars_held = 0
+                        highest_price = close
+                    elif self.params['allow_short'] and rsi > self.params['rsi_overbought']:
+                        # Overbought in Range = shorten
+                        df.iloc[i, df.columns.get_loc('signal')] = -1
+                        current_position = -1
+                        entry_price = close
+                        entry_bar = i
+                        bars_held = 0
+                        lowest_price = close
+        
+        df['position'] = df['signal'].cumsum().clip(-1 if self.params['allow_short'] else 0, 1)
+        return df
+
+
 # Strategy registry for easy access
 STRATEGIES = {
     'sma_crossover': SMA_Crossover_Strategy,
@@ -787,6 +953,7 @@ STRATEGIES = {
     'mean_reversion': MeanReversionStrategy,
     'momentum_breakout': MomentumBreakoutStrategy,
     'range_scalper': RangeScalperStrategy,
+    'adaptive_momentum': AdaptiveMomentumStrategy,  # NEW!
 }
 
 

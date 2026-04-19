@@ -232,3 +232,467 @@ AttributeError: 'PaperTrader' object has no attribute 'update_price'. Did you me
 2026-04-19 01:09:38,636 - paper_trader - INFO - SELL 70.4294 PLTR @ $146.39 | P&L: $+1280.66 | Cash: $10765.53
 2026-04-19 01:09:38,636 - paper_trader - INFO - Portfolio summary saved to reports/paper_trading_PLTR_mean_reversion_20260419_010938.json
 2026-04-19 01:09:38,636 - __main__ - INFO - Paper trading complete!
+2026-04-19 01:25:52,806 - __main__ - INFO - ============================================================
+2026-04-19 01:25:52,806 - __main__ - INFO - STARTING PAPER TRADING MODE
+2026-04-19 01:25:52,806 - __main__ - INFO - ============================================================
+2026-04-19 01:25:52,806 - __main__ - INFO - Symbol: AAPL
+2026-04-19 01:25:52,806 - __main__ - INFO - Strategy: sma_crossover
+2026-04-19 01:25:52,806 - __main__ - INFO - Interval: 1d
+2026-04-19 01:25:52,806 - paper_trader - INFO - Database initialized at data/paper_trades_AAPL_sma_crossover.db
+2026-04-19 01:25:52,807 - paper_trader - INFO - Paper trader initialized with $10,000.00
+2026-04-19 01:25:52,807 - __main__ - INFO - Fetching market data...
+2026-04-19 01:25:52,807 - data_fetcher - INFO - Fetching AAPL from Yahoo Finance (1d)
+2026-04-19 01:25:53,520 - data_fetcher - INFO - Fetched 62 rows for AAPL
+2026-04-19 01:25:53,520 - __main__ - INFO - Running paper trading simulation on 62 data points...
+2026-04-19 01:25:53,523 - paper_trader - INFO - Portfolio summary saved to reports/paper_trading_AAPL_sma_crossover_20260419_012553.json
+2026-04-19 01:25:53,523 - __main__ - INFO - Paper trading complete!
+2026-04-19 01:39:39,611 - __main__ - INFO - ============================================================
+2026-04-19 01:39:39,611 - __main__ - INFO - STARTING PAPER TRADING MODE
+2026-04-19 01:39:39,611 - __main__ - INFO - ============================================================
+2026-04-19 01:39:39,611 - __main__ - INFO - Symbol: PLTR
+2026-04-19 01:39:39,612 - __main__ - INFO - Strategy: mean_reversion
+2026-04-19 01:39:39,612 - __main__ - INFO - Interval: 1d
+2026-04-19 01:39:39,612 - paper_trader - INFO - Database initialized at data/paper_trades_PLTR_mean_reversion.db
+2026-04-19 01:39:39,612 - paper_trader - INFO - Paper trader initialized with $10,000.00
+2026-04-19 01:39:39,612 - __main__ - INFO - Fetching market data...
+2026-04-19 01:39:39,612 - data_fetcher - INFO - Fetching PLTR from Yahoo Finance (1d)
+2026-04-19 01:39:40,072 - data_fetcher - INFO - Fetched 62 rows for PLTR
+2026-04-19 01:39:40,072 - __main__ - INFO - Running paper trading simulation on 62 data points...
+2026-04-19 01:39:40,079 - paper_trader - INFO - BUY 69.0658 PLTR @ $137.55 | Cash: $490.50
+2026-04-19 01:39:40,081 - paper_trader - INFO - SELL 69.0658 PLTR @ $130.49 | P&L: $-496.62 | Cash: $9493.88
+2026-04-19 01:39:40,083 - paper_trader - INFO - BUY 70.4294 PLTR @ $128.06 | Cash: $465.67
+2026-04-19 01:39:40,084 - paper_trader - INFO - SELL 70.4294 PLTR @ $146.39 | P&L: $+1280.66 | Cash: $10765.53
+2026-04-19 01:39:40,085 - paper_trader - INFO - Portfolio summary saved to reports/paper_trading_PLTR_mean_reversion_20260419_013940.json
+2026-04-19 01:39:40,085 - __main__ - INFO - Paper trading complete!
+2026-04-19 01:55:52,824 - __main__ - INFO - ============================================================
+2026-04-19 01:55:52,824 - __main__ - INFO - STARTING PAPER TRADING MODE
+2026-04-19 01:55:52,824 - __main__ - INFO - ============================================================
+2026-04-19 01:55:52,824 - __main__ - INFO - Symbol: AAPL
+2026-04-19 01:55:52,824 - __main__ - INFO - Strategy: sma_crossover
+2026-04-19 01:55:52,824 - __main__ - INFO - Interval: 1d
+2026-04-19 01:55:52,824 - paper_trader - INFO - Database initialized at data/paper_trades_AAPL_sma_crossover.db
+2026-04-19 01:55:52,824 - paper_trader - INFO - Paper trader initialized with $10,000.00
+2026-04-19 01:55:52,824 - __main__ - INFO - Fetching market data...
+2026-04-19 01:55:52,824 - data_fetcher - INFO - Fetching AAPL from Yahoo Finance (1d)
+2026-04-19 01:55:53,910 - data_fetcher - INFO - Fetched 62 rows for AAPL
+2026-04-19 01:55:53,910 - __main__ - INFO - Running paper trading simulation on 62 data points...
+2026-04-19 01:55:53,913 - paper_trader - INFO - Portfolio summary saved to reports/paper_trading_AAPL_sma_crossover_20260419_015553.json
+2026-04-19 01:55:53,913 - __main__ - INFO - Paper trading complete!
+2026-04-19 02:09:41,106 - __main__ - INFO - ============================================================
+2026-04-19 02:09:41,106 - __main__ - INFO - STARTING PAPER TRADING MODE
+2026-04-19 02:09:41,106 - __main__ - INFO - ============================================================
+2026-04-19 02:09:41,106 - __main__ - INFO - Symbol: PLTR
+2026-04-19 02:09:41,106 - __main__ - INFO - Strategy: mean_reversion
+2026-04-19 02:09:41,106 - __main__ - INFO - Interval: 1d
+2026-04-19 02:09:41,107 - paper_trader - INFO - Database initialized at data/paper_trades_PLTR_mean_reversion.db
+2026-04-19 02:09:41,107 - paper_trader - INFO - Paper trader initialized with $10,000.00
+2026-04-19 02:09:41,107 - __main__ - INFO - Fetching market data...
+2026-04-19 02:09:41,107 - data_fetcher - INFO - Fetching PLTR from Yahoo Finance (1d)
+2026-04-19 02:09:41,709 - data_fetcher - INFO - Fetched 62 rows for PLTR
+2026-04-19 02:09:41,710 - __main__ - INFO - Running paper trading simulation on 62 data points...
+2026-04-19 02:09:41,717 - paper_trader - INFO - BUY 69.0658 PLTR @ $137.55 | Cash: $490.50
+2026-04-19 02:09:41,719 - paper_trader - INFO - SELL 69.0658 PLTR @ $130.49 | P&L: $-496.62 | Cash: $9493.88
+2026-04-19 02:09:41,721 - paper_trader - INFO - BUY 70.4294 PLTR @ $128.06 | Cash: $465.67
+2026-04-19 02:09:41,723 - paper_trader - INFO - SELL 70.4294 PLTR @ $146.39 | P&L: $+1280.66 | Cash: $10765.53
+2026-04-19 02:09:41,723 - paper_trader - INFO - Portfolio summary saved to reports/paper_trading_PLTR_mean_reversion_20260419_020941.json
+2026-04-19 02:09:41,723 - __main__ - INFO - Paper trading complete!
+2026-04-19 02:25:52,842 - __main__ - INFO - ============================================================
+2026-04-19 02:25:52,843 - __main__ - INFO - STARTING PAPER TRADING MODE
+2026-04-19 02:25:52,843 - __main__ - INFO - ============================================================
+2026-04-19 02:25:52,843 - __main__ - INFO - Symbol: AAPL
+2026-04-19 02:25:52,843 - __main__ - INFO - Strategy: sma_crossover
+2026-04-19 02:25:52,843 - __main__ - INFO - Interval: 1d
+2026-04-19 02:25:52,843 - paper_trader - INFO - Database initialized at data/paper_trades_AAPL_sma_crossover.db
+2026-04-19 02:25:52,843 - paper_trader - INFO - Paper trader initialized with $10,000.00
+2026-04-19 02:25:52,843 - __main__ - INFO - Fetching market data...
+2026-04-19 02:25:52,843 - data_fetcher - INFO - Fetching AAPL from Yahoo Finance (1d)
+2026-04-19 02:25:53,564 - data_fetcher - INFO - Fetched 62 rows for AAPL
+2026-04-19 02:25:53,564 - __main__ - INFO - Running paper trading simulation on 62 data points...
+2026-04-19 02:25:53,567 - paper_trader - INFO - Portfolio summary saved to reports/paper_trading_AAPL_sma_crossover_20260419_022553.json
+2026-04-19 02:25:53,567 - __main__ - INFO - Paper trading complete!
+2026-04-19 02:39:42,732 - __main__ - INFO - ============================================================
+2026-04-19 02:39:42,732 - __main__ - INFO - STARTING PAPER TRADING MODE
+2026-04-19 02:39:42,732 - __main__ - INFO - ============================================================
+2026-04-19 02:39:42,732 - __main__ - INFO - Symbol: PLTR
+2026-04-19 02:39:42,732 - __main__ - INFO - Strategy: mean_reversion
+2026-04-19 02:39:42,732 - __main__ - INFO - Interval: 1d
+2026-04-19 02:39:42,733 - paper_trader - INFO - Database initialized at data/paper_trades_PLTR_mean_reversion.db
+2026-04-19 02:39:42,733 - paper_trader - INFO - Paper trader initialized with $10,000.00
+2026-04-19 02:39:42,733 - __main__ - INFO - Fetching market data...
+2026-04-19 02:39:42,733 - data_fetcher - INFO - Fetching PLTR from Yahoo Finance (1d)
+2026-04-19 02:39:43,408 - data_fetcher - INFO - Fetched 62 rows for PLTR
+2026-04-19 02:39:43,408 - __main__ - INFO - Running paper trading simulation on 62 data points...
+2026-04-19 02:39:43,416 - paper_trader - INFO - BUY 69.0658 PLTR @ $137.55 | Cash: $490.50
+2026-04-19 02:39:43,417 - paper_trader - INFO - SELL 69.0658 PLTR @ $130.49 | P&L: $-496.62 | Cash: $9493.88
+2026-04-19 02:39:43,419 - paper_trader - INFO - BUY 70.4294 PLTR @ $128.06 | Cash: $465.67
+2026-04-19 02:39:43,421 - paper_trader - INFO - SELL 70.4294 PLTR @ $146.39 | P&L: $+1280.66 | Cash: $10765.53
+2026-04-19 02:39:43,421 - paper_trader - INFO - Portfolio summary saved to reports/paper_trading_PLTR_mean_reversion_20260419_023943.json
+2026-04-19 02:39:43,421 - __main__ - INFO - Paper trading complete!
+2026-04-19 02:55:52,830 - __main__ - INFO - ============================================================
+2026-04-19 02:55:52,830 - __main__ - INFO - STARTING PAPER TRADING MODE
+2026-04-19 02:55:52,830 - __main__ - INFO - ============================================================
+2026-04-19 02:55:52,830 - __main__ - INFO - Symbol: AAPL
+2026-04-19 02:55:52,830 - __main__ - INFO - Strategy: sma_crossover
+2026-04-19 02:55:52,830 - __main__ - INFO - Interval: 1d
+2026-04-19 02:55:52,830 - paper_trader - INFO - Database initialized at data/paper_trades_AAPL_sma_crossover.db
+2026-04-19 02:55:52,830 - paper_trader - INFO - Paper trader initialized with $10,000.00
+2026-04-19 02:55:52,831 - __main__ - INFO - Fetching market data...
+2026-04-19 02:55:52,831 - data_fetcher - INFO - Fetching AAPL from Yahoo Finance (1d)
+2026-04-19 02:55:53,604 - data_fetcher - INFO - Fetched 62 rows for AAPL
+2026-04-19 02:55:53,604 - __main__ - INFO - Running paper trading simulation on 62 data points...
+2026-04-19 02:55:53,606 - paper_trader - INFO - Portfolio summary saved to reports/paper_trading_AAPL_sma_crossover_20260419_025553.json
+2026-04-19 02:55:53,606 - __main__ - INFO - Paper trading complete!
+2026-04-19 03:09:44,427 - __main__ - INFO - ============================================================
+2026-04-19 03:09:44,427 - __main__ - INFO - STARTING PAPER TRADING MODE
+2026-04-19 03:09:44,427 - __main__ - INFO - ============================================================
+2026-04-19 03:09:44,427 - __main__ - INFO - Symbol: PLTR
+2026-04-19 03:09:44,427 - __main__ - INFO - Strategy: mean_reversion
+2026-04-19 03:09:44,427 - __main__ - INFO - Interval: 1d
+2026-04-19 03:09:44,427 - paper_trader - INFO - Database initialized at data/paper_trades_PLTR_mean_reversion.db
+2026-04-19 03:09:44,427 - paper_trader - INFO - Paper trader initialized with $10,000.00
+2026-04-19 03:09:44,427 - __main__ - INFO - Fetching market data...
+2026-04-19 03:09:44,427 - data_fetcher - INFO - Fetching PLTR from Yahoo Finance (1d)
+2026-04-19 03:09:45,146 - data_fetcher - INFO - Fetched 62 rows for PLTR
+2026-04-19 03:09:45,146 - __main__ - INFO - Running paper trading simulation on 62 data points...
+2026-04-19 03:09:45,156 - paper_trader - INFO - BUY 69.0658 PLTR @ $137.55 | Cash: $490.50
+2026-04-19 03:09:45,157 - paper_trader - INFO - SELL 69.0658 PLTR @ $130.49 | P&L: $-496.62 | Cash: $9493.88
+2026-04-19 03:09:45,159 - paper_trader - INFO - BUY 70.4294 PLTR @ $128.06 | Cash: $465.67
+2026-04-19 03:09:45,161 - paper_trader - INFO - SELL 70.4294 PLTR @ $146.39 | P&L: $+1280.66 | Cash: $10765.53
+2026-04-19 03:09:45,161 - paper_trader - INFO - Portfolio summary saved to reports/paper_trading_PLTR_mean_reversion_20260419_030945.json
+2026-04-19 03:09:45,161 - __main__ - INFO - Paper trading complete!
+2026-04-19 03:25:52,805 - __main__ - INFO - ============================================================
+2026-04-19 03:25:52,805 - __main__ - INFO - STARTING PAPER TRADING MODE
+2026-04-19 03:25:52,805 - __main__ - INFO - ============================================================
+2026-04-19 03:25:52,805 - __main__ - INFO - Symbol: AAPL
+2026-04-19 03:25:52,805 - __main__ - INFO - Strategy: sma_crossover
+2026-04-19 03:25:52,806 - __main__ - INFO - Interval: 1d
+2026-04-19 03:25:52,806 - paper_trader - INFO - Database initialized at data/paper_trades_AAPL_sma_crossover.db
+2026-04-19 03:25:52,806 - paper_trader - INFO - Paper trader initialized with $10,000.00
+2026-04-19 03:25:52,806 - __main__ - INFO - Fetching market data...
+2026-04-19 03:25:52,806 - data_fetcher - INFO - Fetching AAPL from Yahoo Finance (1d)
+2026-04-19 03:25:53,838 - data_fetcher - INFO - Fetched 62 rows for AAPL
+2026-04-19 03:25:53,839 - __main__ - INFO - Running paper trading simulation on 62 data points...
+2026-04-19 03:25:53,841 - paper_trader - INFO - Portfolio summary saved to reports/paper_trading_AAPL_sma_crossover_20260419_032553.json
+2026-04-19 03:25:53,841 - __main__ - INFO - Paper trading complete!
+2026-04-19 03:39:46,170 - __main__ - INFO - ============================================================
+2026-04-19 03:39:46,170 - __main__ - INFO - STARTING PAPER TRADING MODE
+2026-04-19 03:39:46,170 - __main__ - INFO - ============================================================
+2026-04-19 03:39:46,170 - __main__ - INFO - Symbol: PLTR
+2026-04-19 03:39:46,170 - __main__ - INFO - Strategy: mean_reversion
+2026-04-19 03:39:46,170 - __main__ - INFO - Interval: 1d
+2026-04-19 03:39:46,170 - paper_trader - INFO - Database initialized at data/paper_trades_PLTR_mean_reversion.db
+2026-04-19 03:39:46,170 - paper_trader - INFO - Paper trader initialized with $10,000.00
+2026-04-19 03:39:46,170 - __main__ - INFO - Fetching market data...
+2026-04-19 03:39:46,170 - data_fetcher - INFO - Fetching PLTR from Yahoo Finance (1d)
+2026-04-19 03:39:46,600 - data_fetcher - INFO - Fetched 62 rows for PLTR
+2026-04-19 03:39:46,600 - __main__ - INFO - Running paper trading simulation on 62 data points...
+2026-04-19 03:39:46,608 - paper_trader - INFO - BUY 69.0658 PLTR @ $137.55 | Cash: $490.50
+2026-04-19 03:39:46,610 - paper_trader - INFO - SELL 69.0658 PLTR @ $130.49 | P&L: $-496.62 | Cash: $9493.88
+2026-04-19 03:39:46,612 - paper_trader - INFO - BUY 70.4294 PLTR @ $128.06 | Cash: $465.67
+2026-04-19 03:39:46,614 - paper_trader - INFO - SELL 70.4294 PLTR @ $146.39 | P&L: $+1280.66 | Cash: $10765.53
+2026-04-19 03:39:46,614 - paper_trader - INFO - Portfolio summary saved to reports/paper_trading_PLTR_mean_reversion_20260419_033946.json
+2026-04-19 03:39:46,615 - __main__ - INFO - Paper trading complete!
+2026-04-19 03:55:52,802 - __main__ - INFO - ============================================================
+2026-04-19 03:55:52,802 - __main__ - INFO - STARTING PAPER TRADING MODE
+2026-04-19 03:55:52,802 - __main__ - INFO - ============================================================
+2026-04-19 03:55:52,802 - __main__ - INFO - Symbol: AAPL
+2026-04-19 03:55:52,802 - __main__ - INFO - Strategy: sma_crossover
+2026-04-19 03:55:52,802 - __main__ - INFO - Interval: 1d
+2026-04-19 03:55:52,803 - paper_trader - INFO - Database initialized at data/paper_trades_AAPL_sma_crossover.db
+2026-04-19 03:55:52,803 - paper_trader - INFO - Paper trader initialized with $10,000.00
+2026-04-19 03:55:52,803 - __main__ - INFO - Fetching market data...
+2026-04-19 03:55:52,803 - data_fetcher - INFO - Fetching AAPL from Yahoo Finance (1d)
+2026-04-19 03:55:53,550 - data_fetcher - INFO - Fetched 62 rows for AAPL
+2026-04-19 03:55:53,550 - __main__ - INFO - Running paper trading simulation on 62 data points...
+2026-04-19 03:55:53,552 - paper_trader - INFO - Portfolio summary saved to reports/paper_trading_AAPL_sma_crossover_20260419_035553.json
+2026-04-19 03:55:53,552 - __main__ - INFO - Paper trading complete!
+2026-04-19 04:09:47,617 - __main__ - INFO - ============================================================
+2026-04-19 04:09:47,617 - __main__ - INFO - STARTING PAPER TRADING MODE
+2026-04-19 04:09:47,617 - __main__ - INFO - ============================================================
+2026-04-19 04:09:47,617 - __main__ - INFO - Symbol: PLTR
+2026-04-19 04:09:47,617 - __main__ - INFO - Strategy: mean_reversion
+2026-04-19 04:09:47,617 - __main__ - INFO - Interval: 1d
+2026-04-19 04:09:47,618 - paper_trader - INFO - Database initialized at data/paper_trades_PLTR_mean_reversion.db
+2026-04-19 04:09:47,618 - paper_trader - INFO - Paper trader initialized with $10,000.00
+2026-04-19 04:09:47,618 - __main__ - INFO - Fetching market data...
+2026-04-19 04:09:47,618 - data_fetcher - INFO - Fetching PLTR from Yahoo Finance (1d)
+2026-04-19 04:09:48,329 - data_fetcher - INFO - Fetched 62 rows for PLTR
+2026-04-19 04:09:48,329 - __main__ - INFO - Running paper trading simulation on 62 data points...
+2026-04-19 04:09:48,337 - paper_trader - INFO - BUY 69.0658 PLTR @ $137.55 | Cash: $490.50
+2026-04-19 04:09:48,338 - paper_trader - INFO - SELL 69.0658 PLTR @ $130.49 | P&L: $-496.62 | Cash: $9493.88
+2026-04-19 04:09:48,340 - paper_trader - INFO - BUY 70.4294 PLTR @ $128.06 | Cash: $465.67
+2026-04-19 04:09:48,342 - paper_trader - INFO - SELL 70.4294 PLTR @ $146.39 | P&L: $+1280.66 | Cash: $10765.53
+2026-04-19 04:09:48,342 - paper_trader - INFO - Portfolio summary saved to reports/paper_trading_PLTR_mean_reversion_20260419_040948.json
+2026-04-19 04:09:48,342 - __main__ - INFO - Paper trading complete!
+2026-04-19 04:25:52,816 - __main__ - INFO - ============================================================
+2026-04-19 04:25:52,816 - __main__ - INFO - STARTING PAPER TRADING MODE
+2026-04-19 04:25:52,816 - __main__ - INFO - ============================================================
+2026-04-19 04:25:52,816 - __main__ - INFO - Symbol: AAPL
+2026-04-19 04:25:52,816 - __main__ - INFO - Strategy: sma_crossover
+2026-04-19 04:25:52,816 - __main__ - INFO - Interval: 1d
+2026-04-19 04:25:52,817 - paper_trader - INFO - Database initialized at data/paper_trades_AAPL_sma_crossover.db
+2026-04-19 04:25:52,817 - paper_trader - INFO - Paper trader initialized with $10,000.00
+2026-04-19 04:25:52,817 - __main__ - INFO - Fetching market data...
+2026-04-19 04:25:52,817 - data_fetcher - INFO - Fetching AAPL from Yahoo Finance (1d)
+2026-04-19 04:25:53,679 - data_fetcher - INFO - Fetched 62 rows for AAPL
+2026-04-19 04:25:53,680 - __main__ - INFO - Running paper trading simulation on 62 data points...
+2026-04-19 04:25:53,683 - paper_trader - INFO - Portfolio summary saved to reports/paper_trading_AAPL_sma_crossover_20260419_042553.json
+2026-04-19 04:25:53,684 - __main__ - INFO - Paper trading complete!
+2026-04-19 04:39:49,331 - __main__ - INFO - ============================================================
+2026-04-19 04:39:49,331 - __main__ - INFO - STARTING PAPER TRADING MODE
+2026-04-19 04:39:49,331 - __main__ - INFO - ============================================================
+2026-04-19 04:39:49,331 - __main__ - INFO - Symbol: PLTR
+2026-04-19 04:39:49,331 - __main__ - INFO - Strategy: mean_reversion
+2026-04-19 04:39:49,331 - __main__ - INFO - Interval: 1d
+2026-04-19 04:39:49,332 - paper_trader - INFO - Database initialized at data/paper_trades_PLTR_mean_reversion.db
+2026-04-19 04:39:49,332 - paper_trader - INFO - Paper trader initialized with $10,000.00
+2026-04-19 04:39:49,332 - __main__ - INFO - Fetching market data...
+2026-04-19 04:39:49,332 - data_fetcher - INFO - Fetching PLTR from Yahoo Finance (1d)
+2026-04-19 04:39:50,244 - data_fetcher - INFO - Fetched 62 rows for PLTR
+2026-04-19 04:39:50,244 - __main__ - INFO - Running paper trading simulation on 62 data points...
+2026-04-19 04:39:50,253 - paper_trader - INFO - BUY 69.0658 PLTR @ $137.55 | Cash: $490.50
+2026-04-19 04:39:50,255 - paper_trader - INFO - SELL 69.0658 PLTR @ $130.49 | P&L: $-496.62 | Cash: $9493.88
+2026-04-19 04:39:50,257 - paper_trader - INFO - BUY 70.4294 PLTR @ $128.06 | Cash: $465.67
+2026-04-19 04:39:50,259 - paper_trader - INFO - SELL 70.4294 PLTR @ $146.39 | P&L: $+1280.66 | Cash: $10765.53
+2026-04-19 04:39:50,259 - paper_trader - INFO - Portfolio summary saved to reports/paper_trading_PLTR_mean_reversion_20260419_043950.json
+2026-04-19 04:39:50,259 - __main__ - INFO - Paper trading complete!
+2026-04-19 04:55:52,831 - __main__ - INFO - ============================================================
+2026-04-19 04:55:52,831 - __main__ - INFO - STARTING PAPER TRADING MODE
+2026-04-19 04:55:52,832 - __main__ - INFO - ============================================================
+2026-04-19 04:55:52,832 - __main__ - INFO - Symbol: AAPL
+2026-04-19 04:55:52,832 - __main__ - INFO - Strategy: sma_crossover
+2026-04-19 04:55:52,832 - __main__ - INFO - Interval: 1d
+2026-04-19 04:55:52,832 - paper_trader - INFO - Database initialized at data/paper_trades_AAPL_sma_crossover.db
+2026-04-19 04:55:52,832 - paper_trader - INFO - Paper trader initialized with $10,000.00
+2026-04-19 04:55:52,832 - __main__ - INFO - Fetching market data...
+2026-04-19 04:55:52,832 - data_fetcher - INFO - Fetching AAPL from Yahoo Finance (1d)
+2026-04-19 04:55:53,745 - data_fetcher - INFO - Fetched 62 rows for AAPL
+2026-04-19 04:55:53,745 - __main__ - INFO - Running paper trading simulation on 62 data points...
+2026-04-19 04:55:53,747 - paper_trader - INFO - Portfolio summary saved to reports/paper_trading_AAPL_sma_crossover_20260419_045553.json
+2026-04-19 04:55:53,747 - __main__ - INFO - Paper trading complete!
+2026-04-19 05:09:51,274 - __main__ - INFO - ============================================================
+2026-04-19 05:09:51,274 - __main__ - INFO - STARTING PAPER TRADING MODE
+2026-04-19 05:09:51,274 - __main__ - INFO - ============================================================
+2026-04-19 05:09:51,274 - __main__ - INFO - Symbol: PLTR
+2026-04-19 05:09:51,274 - __main__ - INFO - Strategy: mean_reversion
+2026-04-19 05:09:51,274 - __main__ - INFO - Interval: 1d
+2026-04-19 05:09:51,275 - paper_trader - INFO - Database initialized at data/paper_trades_PLTR_mean_reversion.db
+2026-04-19 05:09:51,275 - paper_trader - INFO - Paper trader initialized with $10,000.00
+2026-04-19 05:09:51,275 - __main__ - INFO - Fetching market data...
+2026-04-19 05:09:51,275 - data_fetcher - INFO - Fetching PLTR from Yahoo Finance (1d)
+2026-04-19 05:09:52,043 - data_fetcher - INFO - Fetched 62 rows for PLTR
+2026-04-19 05:09:52,043 - __main__ - INFO - Running paper trading simulation on 62 data points...
+2026-04-19 05:09:52,050 - paper_trader - INFO - BUY 69.0658 PLTR @ $137.55 | Cash: $490.50
+2026-04-19 05:09:52,052 - paper_trader - INFO - SELL 69.0658 PLTR @ $130.49 | P&L: $-496.62 | Cash: $9493.88
+2026-04-19 05:09:52,054 - paper_trader - INFO - BUY 70.4294 PLTR @ $128.06 | Cash: $465.67
+2026-04-19 05:09:52,055 - paper_trader - INFO - SELL 70.4294 PLTR @ $146.39 | P&L: $+1280.66 | Cash: $10765.53
+2026-04-19 05:09:52,055 - paper_trader - INFO - Portfolio summary saved to reports/paper_trading_PLTR_mean_reversion_20260419_050952.json
+2026-04-19 05:09:52,055 - __main__ - INFO - Paper trading complete!
+2026-04-19 05:25:52,799 - __main__ - INFO - ============================================================
+2026-04-19 05:25:52,799 - __main__ - INFO - STARTING PAPER TRADING MODE
+2026-04-19 05:25:52,799 - __main__ - INFO - ============================================================
+2026-04-19 05:25:52,799 - __main__ - INFO - Symbol: AAPL
+2026-04-19 05:25:52,799 - __main__ - INFO - Strategy: sma_crossover
+2026-04-19 05:25:52,799 - __main__ - INFO - Interval: 1d
+2026-04-19 05:25:52,800 - paper_trader - INFO - Database initialized at data/paper_trades_AAPL_sma_crossover.db
+2026-04-19 05:25:52,800 - paper_trader - INFO - Paper trader initialized with $10,000.00
+2026-04-19 05:25:52,800 - __main__ - INFO - Fetching market data...
+2026-04-19 05:25:52,800 - data_fetcher - INFO - Fetching AAPL from Yahoo Finance (1d)
+2026-04-19 05:25:53,425 - data_fetcher - INFO - Fetched 62 rows for AAPL
+2026-04-19 05:25:53,426 - __main__ - INFO - Running paper trading simulation on 62 data points...
+2026-04-19 05:25:53,428 - paper_trader - INFO - Portfolio summary saved to reports/paper_trading_AAPL_sma_crossover_20260419_052553.json
+2026-04-19 05:25:53,428 - __main__ - INFO - Paper trading complete!
+2026-04-19 05:39:53,078 - __main__ - INFO - ============================================================
+2026-04-19 05:39:53,078 - __main__ - INFO - STARTING PAPER TRADING MODE
+2026-04-19 05:39:53,078 - __main__ - INFO - ============================================================
+2026-04-19 05:39:53,078 - __main__ - INFO - Symbol: PLTR
+2026-04-19 05:39:53,078 - __main__ - INFO - Strategy: mean_reversion
+2026-04-19 05:39:53,078 - __main__ - INFO - Interval: 1d
+2026-04-19 05:39:53,079 - paper_trader - INFO - Database initialized at data/paper_trades_PLTR_mean_reversion.db
+2026-04-19 05:39:53,079 - paper_trader - INFO - Paper trader initialized with $10,000.00
+2026-04-19 05:39:53,079 - __main__ - INFO - Fetching market data...
+2026-04-19 05:39:53,079 - data_fetcher - INFO - Fetching PLTR from Yahoo Finance (1d)
+2026-04-19 05:39:53,663 - data_fetcher - INFO - Fetched 62 rows for PLTR
+2026-04-19 05:39:53,663 - __main__ - INFO - Running paper trading simulation on 62 data points...
+2026-04-19 05:39:53,671 - paper_trader - INFO - BUY 69.0658 PLTR @ $137.55 | Cash: $490.50
+2026-04-19 05:39:53,673 - paper_trader - INFO - SELL 69.0658 PLTR @ $130.49 | P&L: $-496.62 | Cash: $9493.88
+2026-04-19 05:39:53,674 - paper_trader - INFO - BUY 70.4294 PLTR @ $128.06 | Cash: $465.67
+2026-04-19 05:39:53,676 - paper_trader - INFO - SELL 70.4294 PLTR @ $146.39 | P&L: $+1280.66 | Cash: $10765.53
+2026-04-19 05:39:53,676 - paper_trader - INFO - Portfolio summary saved to reports/paper_trading_PLTR_mean_reversion_20260419_053953.json
+2026-04-19 05:39:53,676 - __main__ - INFO - Paper trading complete!
+2026-04-19 05:55:52,794 - __main__ - INFO - ============================================================
+2026-04-19 05:55:52,794 - __main__ - INFO - STARTING PAPER TRADING MODE
+2026-04-19 05:55:52,795 - __main__ - INFO - ============================================================
+2026-04-19 05:55:52,795 - __main__ - INFO - Symbol: AAPL
+2026-04-19 05:55:52,795 - __main__ - INFO - Strategy: sma_crossover
+2026-04-19 05:55:52,795 - __main__ - INFO - Interval: 1d
+2026-04-19 05:55:52,795 - paper_trader - INFO - Database initialized at data/paper_trades_AAPL_sma_crossover.db
+2026-04-19 05:55:52,795 - paper_trader - INFO - Paper trader initialized with $10,000.00
+2026-04-19 05:55:52,795 - __main__ - INFO - Fetching market data...
+2026-04-19 05:55:52,795 - data_fetcher - INFO - Fetching AAPL from Yahoo Finance (1d)
+2026-04-19 05:55:53,687 - data_fetcher - INFO - Fetched 62 rows for AAPL
+2026-04-19 05:55:53,687 - __main__ - INFO - Running paper trading simulation on 62 data points...
+2026-04-19 05:55:53,689 - paper_trader - INFO - Portfolio summary saved to reports/paper_trading_AAPL_sma_crossover_20260419_055553.json
+2026-04-19 05:55:53,689 - __main__ - INFO - Paper trading complete!
+2026-04-19 06:09:54,679 - __main__ - INFO - ============================================================
+2026-04-19 06:09:54,679 - __main__ - INFO - STARTING PAPER TRADING MODE
+2026-04-19 06:09:54,679 - __main__ - INFO - ============================================================
+2026-04-19 06:09:54,679 - __main__ - INFO - Symbol: PLTR
+2026-04-19 06:09:54,679 - __main__ - INFO - Strategy: mean_reversion
+2026-04-19 06:09:54,679 - __main__ - INFO - Interval: 1d
+2026-04-19 06:09:54,679 - paper_trader - INFO - Database initialized at data/paper_trades_PLTR_mean_reversion.db
+2026-04-19 06:09:54,679 - paper_trader - INFO - Paper trader initialized with $10,000.00
+2026-04-19 06:09:54,679 - __main__ - INFO - Fetching market data...
+2026-04-19 06:09:54,679 - data_fetcher - INFO - Fetching PLTR from Yahoo Finance (1d)
+2026-04-19 06:09:55,515 - data_fetcher - INFO - Fetched 62 rows for PLTR
+2026-04-19 06:09:55,515 - __main__ - INFO - Running paper trading simulation on 62 data points...
+2026-04-19 06:09:55,522 - paper_trader - INFO - BUY 69.0658 PLTR @ $137.55 | Cash: $490.50
+2026-04-19 06:09:55,524 - paper_trader - INFO - SELL 69.0658 PLTR @ $130.49 | P&L: $-496.62 | Cash: $9493.88
+2026-04-19 06:09:55,525 - paper_trader - INFO - BUY 70.4294 PLTR @ $128.06 | Cash: $465.67
+2026-04-19 06:09:55,528 - paper_trader - INFO - SELL 70.4294 PLTR @ $146.39 | P&L: $+1280.66 | Cash: $10765.53
+2026-04-19 06:09:55,528 - paper_trader - INFO - Portfolio summary saved to reports/paper_trading_PLTR_mean_reversion_20260419_060955.json
+2026-04-19 06:09:55,528 - __main__ - INFO - Paper trading complete!
+2026-04-19 06:25:52,815 - __main__ - INFO - ============================================================
+2026-04-19 06:25:52,815 - __main__ - INFO - STARTING PAPER TRADING MODE
+2026-04-19 06:25:52,815 - __main__ - INFO - ============================================================
+2026-04-19 06:25:52,815 - __main__ - INFO - Symbol: AAPL
+2026-04-19 06:25:52,815 - __main__ - INFO - Strategy: sma_crossover
+2026-04-19 06:25:52,815 - __main__ - INFO - Interval: 1d
+2026-04-19 06:25:52,816 - paper_trader - INFO - Database initialized at data/paper_trades_AAPL_sma_crossover.db
+2026-04-19 06:25:52,816 - paper_trader - INFO - Paper trader initialized with $10,000.00
+2026-04-19 06:25:52,816 - __main__ - INFO - Fetching market data...
+2026-04-19 06:25:52,816 - data_fetcher - INFO - Fetching AAPL from Yahoo Finance (1d)
+2026-04-19 06:25:53,530 - data_fetcher - INFO - Fetched 62 rows for AAPL
+2026-04-19 06:25:53,531 - __main__ - INFO - Running paper trading simulation on 62 data points...
+2026-04-19 06:25:53,533 - paper_trader - INFO - Portfolio summary saved to reports/paper_trading_AAPL_sma_crossover_20260419_062553.json
+2026-04-19 06:25:53,533 - __main__ - INFO - Paper trading complete!
+2026-04-19 06:39:56,523 - __main__ - INFO - ============================================================
+2026-04-19 06:39:56,523 - __main__ - INFO - STARTING PAPER TRADING MODE
+2026-04-19 06:39:56,523 - __main__ - INFO - ============================================================
+2026-04-19 06:39:56,523 - __main__ - INFO - Symbol: PLTR
+2026-04-19 06:39:56,523 - __main__ - INFO - Strategy: mean_reversion
+2026-04-19 06:39:56,523 - __main__ - INFO - Interval: 1d
+2026-04-19 06:39:56,524 - paper_trader - INFO - Database initialized at data/paper_trades_PLTR_mean_reversion.db
+2026-04-19 06:39:56,524 - paper_trader - INFO - Paper trader initialized with $10,000.00
+2026-04-19 06:39:56,524 - __main__ - INFO - Fetching market data...
+2026-04-19 06:39:56,524 - data_fetcher - INFO - Fetching PLTR from Yahoo Finance (1d)
+2026-04-19 06:39:57,312 - data_fetcher - INFO - Fetched 62 rows for PLTR
+2026-04-19 06:39:57,312 - __main__ - INFO - Running paper trading simulation on 62 data points...
+2026-04-19 06:39:57,320 - paper_trader - INFO - BUY 69.0658 PLTR @ $137.55 | Cash: $490.50
+2026-04-19 06:39:57,322 - paper_trader - INFO - SELL 69.0658 PLTR @ $130.49 | P&L: $-496.62 | Cash: $9493.88
+2026-04-19 06:39:57,324 - paper_trader - INFO - BUY 70.4294 PLTR @ $128.06 | Cash: $465.67
+2026-04-19 06:39:57,325 - paper_trader - INFO - SELL 70.4294 PLTR @ $146.39 | P&L: $+1280.66 | Cash: $10765.53
+2026-04-19 06:39:57,325 - paper_trader - INFO - Portfolio summary saved to reports/paper_trading_PLTR_mean_reversion_20260419_063957.json
+2026-04-19 06:39:57,325 - __main__ - INFO - Paper trading complete!
+2026-04-19 06:55:52,801 - __main__ - INFO - ============================================================
+2026-04-19 06:55:52,801 - __main__ - INFO - STARTING PAPER TRADING MODE
+2026-04-19 06:55:52,801 - __main__ - INFO - ============================================================
+2026-04-19 06:55:52,801 - __main__ - INFO - Symbol: AAPL
+2026-04-19 06:55:52,801 - __main__ - INFO - Strategy: sma_crossover
+2026-04-19 06:55:52,801 - __main__ - INFO - Interval: 1d
+2026-04-19 06:55:52,802 - paper_trader - INFO - Database initialized at data/paper_trades_AAPL_sma_crossover.db
+2026-04-19 06:55:52,802 - paper_trader - INFO - Paper trader initialized with $10,000.00
+2026-04-19 06:55:52,802 - __main__ - INFO - Fetching market data...
+2026-04-19 06:55:52,802 - data_fetcher - INFO - Fetching AAPL from Yahoo Finance (1d)
+2026-04-19 06:55:53,381 - data_fetcher - INFO - Fetched 62 rows for AAPL
+2026-04-19 06:55:53,381 - __main__ - INFO - Running paper trading simulation on 62 data points...
+2026-04-19 06:55:53,384 - paper_trader - INFO - Portfolio summary saved to reports/paper_trading_AAPL_sma_crossover_20260419_065553.json
+2026-04-19 06:55:53,384 - __main__ - INFO - Paper trading complete!
+2026-04-19 07:25:52,869 - __main__ - INFO - ============================================================
+2026-04-19 07:25:52,869 - __main__ - INFO - STARTING PAPER TRADING MODE
+2026-04-19 07:25:52,869 - __main__ - INFO - ============================================================
+2026-04-19 07:25:52,869 - __main__ - INFO - Symbol: AAPL
+2026-04-19 07:25:52,869 - __main__ - INFO - Strategy: sma_crossover
+2026-04-19 07:25:52,869 - __main__ - INFO - Interval: 1d
+2026-04-19 07:25:52,870 - paper_trader - INFO - Database initialized at data/paper_trades_AAPL_sma_crossover.db
+2026-04-19 07:25:52,870 - paper_trader - INFO - Paper trader initialized with $10,000.00
+2026-04-19 07:25:52,870 - __main__ - INFO - Fetching market data...
+2026-04-19 07:25:52,870 - data_fetcher - INFO - Fetching AAPL from Yahoo Finance (1d)
+2026-04-19 07:25:54,124 - data_fetcher - INFO - Fetched 62 rows for AAPL
+2026-04-19 07:25:54,124 - __main__ - INFO - Running paper trading simulation on 62 data points...
+2026-04-19 07:25:54,126 - paper_trader - INFO - Portfolio summary saved to reports/paper_trading_AAPL_sma_crossover_20260419_072554.json
+2026-04-19 07:25:54,126 - __main__ - INFO - Paper trading complete!
+2026-04-19 07:55:52,800 - __main__ - INFO - ============================================================
+2026-04-19 07:55:52,800 - __main__ - INFO - STARTING PAPER TRADING MODE
+2026-04-19 07:55:52,800 - __main__ - INFO - ============================================================
+2026-04-19 07:55:52,800 - __main__ - INFO - Symbol: AAPL
+2026-04-19 07:55:52,800 - __main__ - INFO - Strategy: sma_crossover
+2026-04-19 07:55:52,800 - __main__ - INFO - Interval: 1d
+2026-04-19 07:55:52,800 - paper_trader - INFO - Database initialized at data/paper_trades_AAPL_sma_crossover.db
+2026-04-19 07:55:52,801 - paper_trader - INFO - Paper trader initialized with $10,000.00
+2026-04-19 07:55:52,801 - __main__ - INFO - Fetching market data...
+2026-04-19 07:55:52,801 - data_fetcher - INFO - Fetching AAPL from Yahoo Finance (1d)
+2026-04-19 07:55:53,664 - data_fetcher - INFO - Fetched 62 rows for AAPL
+2026-04-19 07:55:53,665 - __main__ - INFO - Running paper trading simulation on 62 data points...
+2026-04-19 07:55:53,667 - paper_trader - INFO - Portfolio summary saved to reports/paper_trading_AAPL_sma_crossover_20260419_075553.json
+2026-04-19 07:55:53,667 - __main__ - INFO - Paper trading complete!
+2026-04-19 08:25:52,862 - __main__ - INFO - ============================================================
+2026-04-19 08:25:52,862 - __main__ - INFO - STARTING PAPER TRADING MODE
+2026-04-19 08:25:52,862 - __main__ - INFO - ============================================================
+2026-04-19 08:25:52,862 - __main__ - INFO - Symbol: AAPL
+2026-04-19 08:25:52,862 - __main__ - INFO - Strategy: sma_crossover
+2026-04-19 08:25:52,862 - __main__ - INFO - Interval: 1d
+2026-04-19 08:25:52,862 - paper_trader - INFO - Database initialized at data/paper_trades_AAPL_sma_crossover.db
+2026-04-19 08:25:52,862 - paper_trader - INFO - Paper trader initialized with $10,000.00
+2026-04-19 08:25:52,862 - __main__ - INFO - Fetching market data...
+2026-04-19 08:25:52,862 - data_fetcher - INFO - Fetching AAPL from Yahoo Finance (1d)
+2026-04-19 08:25:53,428 - data_fetcher - INFO - Fetched 62 rows for AAPL
+2026-04-19 08:25:53,428 - __main__ - INFO - Running paper trading simulation on 62 data points...
+2026-04-19 08:25:53,430 - paper_trader - INFO - Portfolio summary saved to reports/paper_trading_AAPL_sma_crossover_20260419_082553.json
+2026-04-19 08:25:53,430 - __main__ - INFO - Paper trading complete!
+2026-04-19 08:55:52,811 - __main__ - INFO - ============================================================
+2026-04-19 08:55:52,811 - __main__ - INFO - STARTING PAPER TRADING MODE
+2026-04-19 08:55:52,811 - __main__ - INFO - ============================================================
+2026-04-19 08:55:52,811 - __main__ - INFO - Symbol: AAPL
+2026-04-19 08:55:52,811 - __main__ - INFO - Strategy: sma_crossover
+2026-04-19 08:55:52,811 - __main__ - INFO - Interval: 1d
+2026-04-19 08:55:52,811 - paper_trader - INFO - Database initialized at data/paper_trades_AAPL_sma_crossover.db
+2026-04-19 08:55:52,811 - paper_trader - INFO - Paper trader initialized with $10,000.00
+2026-04-19 08:55:52,811 - __main__ - INFO - Fetching market data...
+2026-04-19 08:55:52,812 - data_fetcher - INFO - Fetching AAPL from Yahoo Finance (1d)
+2026-04-19 08:55:53,647 - data_fetcher - INFO - Fetched 62 rows for AAPL
+2026-04-19 08:55:53,647 - __main__ - INFO - Running paper trading simulation on 62 data points...
+2026-04-19 08:55:53,650 - paper_trader - INFO - Portfolio summary saved to reports/paper_trading_AAPL_sma_crossover_20260419_085553.json
+2026-04-19 08:55:53,650 - __main__ - INFO - Paper trading complete!
+2026-04-19 09:25:52,857 - __main__ - INFO - ============================================================
+2026-04-19 09:25:52,857 - __main__ - INFO - STARTING PAPER TRADING MODE
+2026-04-19 09:25:52,857 - __main__ - INFO - ============================================================
+2026-04-19 09:25:52,857 - __main__ - INFO - Symbol: AAPL
+2026-04-19 09:25:52,857 - __main__ - INFO - Strategy: sma_crossover
+2026-04-19 09:25:52,857 - __main__ - INFO - Interval: 1d
+2026-04-19 09:25:52,858 - paper_trader - INFO - Database initialized at data/paper_trades_AAPL_sma_crossover.db
+2026-04-19 09:25:52,858 - paper_trader - INFO - Paper trader initialized with $10,000.00
+2026-04-19 09:25:52,858 - __main__ - INFO - Fetching market data...
+2026-04-19 09:25:52,858 - data_fetcher - INFO - Fetching AAPL from Yahoo Finance (1d)
+2026-04-19 09:25:54,017 - data_fetcher - INFO - Fetched 62 rows for AAPL
+2026-04-19 09:25:54,018 - __main__ - INFO - Running paper trading simulation on 62 data points...
+2026-04-19 09:25:54,020 - paper_trader - INFO - Portfolio summary saved to reports/paper_trading_AAPL_sma_crossover_20260419_092554.json
+2026-04-19 09:25:54,020 - __main__ - INFO - Paper trading complete!
+2026-04-19 09:55:52,822 - __main__ - INFO - ============================================================
+2026-04-19 09:55:52,822 - __main__ - INFO - STARTING PAPER TRADING MODE
+2026-04-19 09:55:52,822 - __main__ - INFO - ============================================================
+2026-04-19 09:55:52,822 - __main__ - INFO - Symbol: AAPL
+2026-04-19 09:55:52,822 - __main__ - INFO - Strategy: sma_crossover
+2026-04-19 09:55:52,822 - __main__ - INFO - Interval: 1d
+2026-04-19 09:55:52,823 - paper_trader - INFO - Database initialized at data/paper_trades_AAPL_sma_crossover.db
+2026-04-19 09:55:52,823 - paper_trader - INFO - Paper trader initialized with $10,000.00
+2026-04-19 09:55:52,823 - __main__ - INFO - Fetching market data...
+2026-04-19 09:55:52,823 - data_fetcher - INFO - Fetching AAPL from Yahoo Finance (1d)
+2026-04-19 09:55:53,981 - data_fetcher - INFO - Fetched 62 rows for AAPL
+2026-04-19 09:55:53,981 - __main__ - INFO - Running paper trading simulation on 62 data points...
+2026-04-19 09:55:53,983 - paper_trader - INFO - Portfolio summary saved to reports/paper_trading_AAPL_sma_crossover_20260419_095553.json
+2026-04-19 09:55:53,983 - __main__ - INFO - Paper trading complete!
+2026-04-19 10:25:52,848 - __main__ - INFO - ============================================================
+2026-04-19 10:25:52,848 - __main__ - INFO - STARTING PAPER TRADING MODE
+2026-04-19 10:25:52,848 - __main__ - INFO - ============================================================
+2026-04-19 10:25:52,848 - __main__ - INFO - Symbol: AAPL
+2026-04-19 10:25:52,848 - __main__ - INFO - Strategy: sma_crossover
+2026-04-19 10:25:52,848 - __main__ - INFO - Interval: 1d
+2026-04-19 10:25:52,849 - paper_trader - INFO - Database initialized at data/paper_trades_AAPL_sma_crossover.db
+2026-04-19 10:25:52,849 - paper_trader - INFO - Paper trader initialized with $10,000.00
+2026-04-19 10:25:52,849 - __main__ - INFO - Fetching market data...
+2026-04-19 10:25:52,849 - data_fetcher - INFO - Fetching AAPL from Yahoo Finance (1d)
+2026-04-19 10:25:53,832 - data_fetcher - INFO - Fetched 62 rows for AAPL
+2026-04-19 10:25:53,832 - __main__ - INFO - Running paper trading simulation on 62 data points...
+2026-04-19 10:25:53,835 - paper_trader - INFO - Portfolio summary saved to reports/paper_trading_AAPL_sma_crossover_20260419_102553.json
+2026-04-19 10:25:53,835 - __main__ - INFO - Paper trading complete!

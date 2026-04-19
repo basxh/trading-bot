@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-04-19T00:47:56.344035",
+  "timestamp": "2026-04-19T02:25:53.675049",
   "iteration": 4,
   "portfolio_value": 10000.0,
   "trades_count": 0,
-  "pnl": 0,
-  "running_hours": 0.05117455277777778
+  "pnl": 0.0,
+  "running_hours": 1.5000000608333333
 }

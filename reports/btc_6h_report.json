@@ -1,0 +1,20 @@
+{
+  "test_name": "BTC 6H Paper Trading Test",
+  "symbol": "BTC-USD",
+  "strategy": "range_scalper",
+  "start_time": "2026-04-19T01:08:05.863527",
+  "end_time": "2026-04-19T07:08:07.055796",
+  "duration_hours": 6,
+  "initial_capital": 10000.0,
+  "commission_rate": 0.001,
+  "final_summary": {
+    "timestamp": "2026-04-19T07:08:07.055801",
+    "initial_capital": 10000.0,
+    "cash": 9921.74525726934,
+    "total_value": 9921.74525726934,
+    "total_pnl": -21.42771743286903,
+    "total_return_pct": -0.21427717432869028,
+    "positions": {},
+    "trade_count": 12
+  }
+}

@@ -2,15 +2,497 @@
   "test_name": "PLTR 6H Paper Trading Test",
   "symbol": "PLTR",
   "strategy": "mean_reversion",
-  "start_time": "2026-04-19T01:08:52.436315",
-  "end_time": "2026-04-19T01:08:57.437417",
+  "start_time": "2026-04-19T01:09:37.572493",
+  "end_time": "2026-04-19T07:09:57.699549",
   "duration_hours": 6,
+  "run_interval_minutes": 30,
   "summary": {
-    "total_trades": 0,
-    "winning_trades": 0,
-    "losing_trades": 0,
-    "total_pnl": 0,
-    "win_rate": 0
+    "total_trades": 48,
+    "winning_trades": 12,
+    "losing_trades": 12,
+    "total_pnl": 9408.53,
+    "win_rate": 25.0
   },
-  "trades": []
+  "trades": [
+    {
+      "timestamp": "2026-04-19T01:09:38.629598",
+      "symbol": "PLTR",
+      "side": "buy",
+      "quantity": 69.06579272430336,
+      "price": 137.5500030517578,
+      "pnl": null,
+      "pnl_pct": null,
+      "notes": "Paper trade: mean_reversion"
+    },
+    {
+      "timestamp": "2026-04-19T01:09:38.631809",
+      "symbol": "PLTR",
+      "side": "sell",
+      "quantity": 69.06579272430336,
+      "price": 130.49000549316406,
+      "pnl": -496.6167236879064,
+      "pnl_pct": -5.227544459872699,
+      "notes": "Paper trade: mean_reversion"
+    },
+    {
+      "timestamp": "2026-04-19T01:09:38.633250",
+      "symbol": "PLTR",
+      "side": "buy",
+      "quantity": 70.4294025022901,
+      "price": 128.05999755859375,
+      "pnl": null,
+      "pnl_pct": null,
+      "notes": "Paper trade: mean_reversion"
+    },
+    {
+      "timestamp": "2026-04-19T01:09:38.634762",
+      "symbol": "PLTR",
+      "side": "sell",
+      "quantity": 70.4294025022901,
+      "price": 146.38999938964844,
+      "pnl": 1280.660916637742,
+      "pnl_pct": 14.199291096616761,
+      "notes": "Paper trade: mean_reversion"
+    },
+    {
+      "timestamp": "2026-04-19T01:39:40.077692",
+      "symbol": "PLTR",
+      "side": "buy",
+      "quantity": 69.06579272430336,
+      "price": 137.5500030517578,
+      "pnl": null,
+      "pnl_pct": null,
+      "notes": "Paper trade: mean_reversion"
+    },
+    {
+      "timestamp": "2026-04-19T01:39:40.079937",
+      "symbol": "PLTR",
+      "side": "sell",
+      "quantity": 69.06579272430336,
+      "price": 130.49000549316406,
+      "pnl": -496.6167236879064,
+      "pnl_pct": -5.227544459872699,
+      "notes": "Paper trade: mean_reversion"
+    },
+    {
+      "timestamp": "2026-04-19T01:39:40.081972",
+      "symbol": "PLTR",
+      "side": "buy",
+      "quantity": 70.4294025022901,
+      "price": 128.05999755859375,
+      "pnl": null,
+      "pnl_pct": null,
+      "notes": "Paper trade: mean_reversion"
+    },
+    {
+      "timestamp": "2026-04-19T01:39:40.083532",
+      "symbol": "PLTR",
+      "side": "sell",
+      "quantity": 70.4294025022901,
+      "price": 146.38999938964844,
+      "pnl": 1280.660916637742,
+      "pnl_pct": 14.199291096616761,
+      "notes": "Paper trade: mean_reversion"
+    },
+    {
+      "timestamp": "2026-04-19T02:09:41.715327",
+      "symbol": "PLTR",
+      "side": "buy",
+      "quantity": 69.06579272430336,
+      "price": 137.5500030517578,
+      "pnl": null,
+      "pnl_pct": null,
+      "notes": "Paper trade: mean_reversion"
+    },
+    {
+      "timestamp": "2026-04-19T02:09:41.717587",
+      "symbol": "PLTR",
+      "side": "sell",
+      "quantity": 69.06579272430336,
+      "price": 130.49000549316406,
+      "pnl": -496.6167236879064,
+      "pnl_pct": -5.227544459872699,
+      "notes": "Paper trade: mean_reversion"
+    },
+    {
+      "timestamp": "2026-04-19T02:09:41.719559",
+      "symbol": "PLTR",
+      "side": "buy",
+      "quantity": 70.4294025022901,
+      "price": 128.05999755859375,
+      "pnl": null,
+      "pnl_pct": null,
+      "notes": "Paper trade: mean_reversion"
+    },
+    {
+      "timestamp": "2026-04-19T02:09:41.721632",
+      "symbol": "PLTR",
+      "side": "sell",
+      "quantity": 70.4294025022901,
+      "price": 146.38999938964844,
+      "pnl": 1280.660916637742,
+      "pnl_pct": 14.199291096616761,
+      "notes": "Paper trade: mean_reversion"
+    },
+    {
+      "timestamp": "2026-04-19T02:39:43.414087",
+      "symbol": "PLTR",
+      "side": "buy",
+      "quantity": 69.06579272430336,
+      "price": 137.5500030517578,
+      "pnl": null,
+      "pnl_pct": null,
+      "notes": "Paper trade: mean_reversion"
+    },
+    {
+      "timestamp": "2026-04-19T02:39:43.416418",
+      "symbol": "PLTR",
+      "side": "sell",
+      "quantity": 69.06579272430336,
+      "price": 130.49000549316406,
+      "pnl": -496.6167236879064,
+      "pnl_pct": -5.227544459872699,
+      "notes": "Paper trade: mean_reversion"
+    },
+    {
+      "timestamp": "2026-04-19T02:39:43.418087",
+      "symbol": "PLTR",
+      "side": "buy",
+      "quantity": 70.4294025022901,
+      "price": 128.05999755859375,
+      "pnl": null,
+      "pnl_pct": null,
+      "notes": "Paper trade: mean_reversion"
+    },
+    {
+      "timestamp": "2026-04-19T02:39:43.420051",
+      "symbol": "PLTR",
+      "side": "sell",
+      "quantity": 70.4294025022901,
+      "price": 146.38999938964844,
+      "pnl": 1280.660916637742,
+      "pnl_pct": 14.199291096616761,
+      "notes": "Paper trade: mean_reversion"
+    },
+    {
+      "timestamp": "2026-04-19T03:09:45.153979",
+      "symbol": "PLTR",
+      "side": "buy",
+      "quantity": 69.06579272430336,
+      "price": 137.5500030517578,
+      "pnl": null,
+      "pnl_pct": null,
+      "notes": "Paper trade: mean_reversion"
+    },
+    {
+      "timestamp": "2026-04-19T03:09:45.156400",
+      "symbol": "PLTR",
+      "side": "sell",
+      "quantity": 69.06579272430336,
+      "price": 130.49000549316406,
+      "pnl": -496.6167236879064,
+      "pnl_pct": -5.227544459872699,
+      "notes": "Paper trade: mean_reversion"
+    },
+    {
+      "timestamp": "2026-04-19T03:09:45.158134",
+      "symbol": "PLTR",
+      "side": "buy",
+      "quantity": 70.4294025022901,
+      "price": 128.05999755859375,
+      "pnl": null,
+      "pnl_pct": null,
+      "notes": "Paper trade: mean_reversion"
+    },
+    {
+      "timestamp": "2026-04-19T03:09:45.159828",
+      "symbol": "PLTR",
+      "side": "sell",
+      "quantity": 70.4294025022901,
+      "price": 146.38999938964844,
+      "pnl": 1280.660916637742,
+      "pnl_pct": 14.199291096616761,
+      "notes": "Paper trade: mean_reversion"
+    },
+    {
+      "timestamp": "2026-04-19T03:39:46.605855",
+      "symbol": "PLTR",
+      "side": "buy",
+      "quantity": 69.06579272430336,
+      "price": 137.5500030517578,
+      "pnl": null,
+      "pnl_pct": null,
+      "notes": "Paper trade: mean_reversion"
+    },
+    {
+      "timestamp": "2026-04-19T03:39:46.608890",
+      "symbol": "PLTR",
+      "side": "sell",
+      "quantity": 69.06579272430336,
+      "price": 130.49000549316406,
+      "pnl": -496.6167236879064,
+      "pnl_pct": -5.227544459872699,
+      "notes": "Paper trade: mean_reversion"
+    },
+    {
+      "timestamp": "2026-04-19T03:39:46.611062",
+      "symbol": "PLTR",
+      "side": "buy",
+      "quantity": 70.4294025022901,
+      "price": 128.05999755859375,
+      "pnl": null,
+      "pnl_pct": null,
+      "notes": "Paper trade: mean_reversion"
+    },
+    {
+      "timestamp": "2026-04-19T03:39:46.612914",
+      "symbol": "PLTR",
+      "side": "sell",
+      "quantity": 70.4294025022901,
+      "price": 146.38999938964844,
+      "pnl": 1280.660916637742,
+      "pnl_pct": 14.199291096616761,
+      "notes": "Paper trade: mean_reversion"
+    },
+    {
+      "timestamp": "2026-04-19T04:09:48.335064",
+      "symbol": "PLTR",
+      "side": "buy",
+      "quantity": 69.06579272430336,
+      "price": 137.5500030517578,
+      "pnl": null,
+      "pnl_pct": null,
+      "notes": "Paper trade: mean_reversion"
+    },
+    {
+      "timestamp": "2026-04-19T04:09:48.337256",
+      "symbol": "PLTR",
+      "side": "sell",
+      "quantity": 69.06579272430336,
+      "price": 130.49000549316406,
+      "pnl": -496.6167236879064,
+      "pnl_pct": -5.227544459872699,
+      "notes": "Paper trade: mean_reversion"
+    },
+    {
+      "timestamp": "2026-04-19T04:09:48.338916",
+      "symbol": "PLTR",
+      "side": "buy",
+      "quantity": 70.4294025022901,
+      "price": 128.05999755859375,
+      "pnl": null,
+      "pnl_pct": null,
+      "notes": "Paper trade: mean_reversion"
+    },
+    {
+      "timestamp": "2026-04-19T04:09:48.340489",
+      "symbol": "PLTR",
+      "side": "sell",
+      "quantity": 70.4294025022901,
+      "price": 146.38999938964844,
+      "pnl": 1280.660916637742,
+      "pnl_pct": 14.199291096616761,
+      "notes": "Paper trade: mean_reversion"
+    },
+    {
+      "timestamp": "2026-04-19T04:39:50.250914",
+      "symbol": "PLTR",
+      "side": "buy",
+      "quantity": 69.06579272430336,
+      "price": 137.5500030517578,
+      "pnl": null,
+      "pnl_pct": null,
+      "notes": "Paper trade: mean_reversion"
+    },
+    {
+      "timestamp": "2026-04-19T04:39:50.253412",
+      "symbol": "PLTR",
+      "side": "sell",
+      "quantity": 69.06579272430336,
+      "price": 130.49000549316406,
+      "pnl": -496.6167236879064,
+      "pnl_pct": -5.227544459872699,
+      "notes": "Paper trade: mean_reversion"
+    },
+    {
+      "timestamp": "2026-04-19T04:39:50.255600",
+      "symbol": "PLTR",
+      "side": "buy",
+      "quantity": 70.4294025022901,
+      "price": 128.05999755859375,
+      "pnl": null,
+      "pnl_pct": null,
+      "notes": "Paper trade: mean_reversion"
+    },
+    {
+      "timestamp": "2026-04-19T04:39:50.257623",
+      "symbol": "PLTR",
+      "side": "sell",
+      "quantity": 70.4294025022901,
+      "price": 146.38999938964844,
+      "pnl": 1280.660916637742,
+      "pnl_pct": 14.199291096616761,
+      "notes": "Paper trade: mean_reversion"
+    },
+    {
+      "timestamp": "2026-04-19T05:09:52.048998",
+      "symbol": "PLTR",
+      "side": "buy",
+      "quantity": 69.06579272430336,
+      "price": 137.5500030517578,
+      "pnl": null,
+      "pnl_pct": null,
+      "notes": "Paper trade: mean_reversion"
+    },
+    {
+      "timestamp": "2026-04-19T05:09:52.051220",
+      "symbol": "PLTR",
+      "side": "sell",
+      "quantity": 69.06579272430336,
+      "price": 130.49000549316406,
+      "pnl": -496.6167236879064,
+      "pnl_pct": -5.227544459872699,
+      "notes": "Paper trade: mean_reversion"
+    },
+    {
+      "timestamp": "2026-04-19T05:09:52.052756",
+      "symbol": "PLTR",
+      "side": "buy",
+      "quantity": 70.4294025022901,
+      "price": 128.05999755859375,
+      "pnl": null,
+      "pnl_pct": null,
+      "notes": "Paper trade: mean_reversion"
+    },
+    {
+      "timestamp": "2026-04-19T05:09:52.054224",
+      "symbol": "PLTR",
+      "side": "sell",
+      "quantity": 70.4294025022901,
+      "price": 146.38999938964844,
+      "pnl": 1280.660916637742,
+      "pnl_pct": 14.199291096616761,
+      "notes": "Paper trade: mean_reversion"
+    },
+    {
+      "timestamp": "2026-04-19T05:39:53.669540",
+      "symbol": "PLTR",
+      "side": "buy",
+      "quantity": 69.06579272430336,
+      "price": 137.5500030517578,
+      "pnl": null,
+      "pnl_pct": null,
+      "notes": "Paper trade: mean_reversion"
+    },
+    {
+      "timestamp": "2026-04-19T05:39:53.671736",
+      "symbol": "PLTR",
+      "side": "sell",
+      "quantity": 69.06579272430336,
+      "price": 130.49000549316406,
+      "pnl": -496.6167236879064,
+      "pnl_pct": -5.227544459872699,
+      "notes": "Paper trade: mean_reversion"
+    },
+    {
+      "timestamp": "2026-04-19T05:39:53.673321",
+      "symbol": "PLTR",
+      "side": "buy",
+      "quantity": 70.4294025022901,
+      "price": 128.05999755859375,
+      "pnl": null,
+      "pnl_pct": null,
+      "notes": "Paper trade: mean_reversion"
+    },
+    {
+      "timestamp": "2026-04-19T05:39:53.675095",
+      "symbol": "PLTR",
+      "side": "sell",
+      "quantity": 70.4294025022901,
+      "price": 146.38999938964844,
+      "pnl": 1280.660916637742,
+      "pnl_pct": 14.199291096616761,
+      "notes": "Paper trade: mean_reversion"
+    },
+    {
+      "timestamp": "2026-04-19T06:09:55.520613",
+      "symbol": "PLTR",
+      "side": "buy",
+      "quantity": 69.06579272430336,
+      "price": 137.5500030517578,
+      "pnl": null,
+      "pnl_pct": null,
+      "notes": "Paper trade: mean_reversion"
+    },
+    {
+      "timestamp": "2026-04-19T06:09:55.522684",
+      "symbol": "PLTR",
+      "side": "sell",
+      "quantity": 69.06579272430336,
+      "price": 130.49000549316406,
+      "pnl": -496.6167236879064,
+      "pnl_pct": -5.227544459872699,
+      "notes": "Paper trade: mean_reversion"
+    },
+    {
+      "timestamp": "2026-04-19T06:09:55.524168",
+      "symbol": "PLTR",
+      "side": "buy",
+      "quantity": 70.4294025022901,
+      "price": 128.05999755859375,
+      "pnl": null,
+      "pnl_pct": null,
+      "notes": "Paper trade: mean_reversion"
+    },
+    {
+      "timestamp": "2026-04-19T06:09:55.526406",
+      "symbol": "PLTR",
+      "side": "sell",
+      "quantity": 70.4294025022901,
+      "price": 146.38999938964844,
+      "pnl": 1280.660916637742,
+      "pnl_pct": 14.199291096616761,
+      "notes": "Paper trade: mean_reversion"
+    },
+    {
+      "timestamp": "2026-04-19T06:39:57.318746",
+      "symbol": "PLTR",
+      "side": "buy",
+      "quantity": 69.06579272430336,
+      "price": 137.5500030517578,
+      "pnl": null,
+      "pnl_pct": null,
+      "notes": "Paper trade: mean_reversion"
+    },
+    {
+      "timestamp": "2026-04-19T06:39:57.320914",
+      "symbol": "PLTR",
+      "side": "sell",
+      "quantity": 69.06579272430336,
+      "price": 130.49000549316406,
+      "pnl": -496.6167236879064,
+      "pnl_pct": -5.227544459872699,
+      "notes": "Paper trade: mean_reversion"
+    },
+    {
+      "timestamp": "2026-04-19T06:39:57.322594",
+      "symbol": "PLTR",
+      "side": "buy",
+      "quantity": 70.4294025022901,
+      "price": 128.05999755859375,
+      "pnl": null,
+      "pnl_pct": null,
+      "notes": "Paper trade: mean_reversion"
+    },
+    {
+      "timestamp": "2026-04-19T06:39:57.324258",
+      "symbol": "PLTR",
+      "side": "sell",
+      "quantity": 70.4294025022901,
+      "price": 146.38999938964844,
+      "pnl": 1280.660916637742,
+      "pnl_pct": 14.199291096616761,
+      "notes": "Paper trade: mean_reversion"
+    }
+  ]
 }

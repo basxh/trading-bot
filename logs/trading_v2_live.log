@@ -1,0 +1,29 @@
+2026-04-19 13:41:47,686 | INFO | ======================================================================
+2026-04-19 13:41:47,686 | INFO | 🚀 TRADING BOT v2 - STARTET
+2026-04-19 13:41:47,686 | INFO | ======================================================================
+2026-04-19 13:41:47,686 | INFO | Symbol: ETH-USD
+2026-04-19 13:41:47,686 | INFO | Timeframe: 15m
+2026-04-19 13:41:47,686 | INFO | Duration: 2h
+2026-04-19 13:41:47,686 | INFO | Check Interval: 60s
+2026-04-19 13:41:47,686 | INFO | Start: 2026-04-19 13:41:47.686157
+2026-04-19 13:41:47,686 | INFO | End: 2026-04-19 15:41:47.686157
+2026-04-19 13:41:47,686 | INFO | ======================================================================
+2026-04-19 13:41:47,686 | INFO | 🧪 Teste Datenabruf...
+2026-04-19 13:41:48,048 | INFO | ✅ Daten abgerufen: 431 candles für ETH-USD
+2026-04-19 13:41:48,048 | INFO | ✅ Datenabruf OK - Letzter Preis: $2327.30
+2026-04-19 13:41:48,048 | INFO | 🧪 Teste Strategie...
+2026-04-19 13:41:48,087 | INFO | ✅ Daten abgerufen: 431 candles für ETH-USD
+2026-04-19 13:41:48,090 | INFO | ✅ Strategie OK - Signal: -1, Reason: RSI overbought (64.9 > 60)
+2026-04-19 13:41:48,091 | INFO |    RSI: 64.9, ATR: 5.76
+2026-04-19 13:41:48,091 | INFO | ✅ Alle Tests bestanden - Starte Trading Loop
+2026-04-19 13:41:48,091 | INFO | ======================================================================
+2026-04-19 13:41:48,091 | INFO | 
+🔄 Iteration #1 | Elapsed: 0.0min | Remaining: 120.0min
+2026-04-19 13:41:48,130 | INFO | ✅ Daten abgerufen: 431 candles für ETH-USD
+2026-04-19 13:41:48,133 | INFO | 📊 Signal: -1 | Price: $2327.30 | RSI: 64.9
+2026-04-19 13:41:48,133 | INFO | 💰 Status: $10000.00 | P&L: $+0.00 (+0.00%) | Trades: 0
+2026-04-19 13:42:48,134 | INFO | 
+🔄 Iteration #2 | Elapsed: 1.0min | Remaining: 119.0min
+2026-04-19 13:42:48,236 | INFO | ✅ Daten abgerufen: 431 candles für ETH-USD
+2026-04-19 13:42:48,239 | INFO | 📊 Signal: -1 | Price: $2326.61 | RSI: 64.2
+2026-04-19 13:42:48,239 | INFO | 💰 Status: $10000.00 | P&L: $+0.00 (+0.00%) | Trades: 0

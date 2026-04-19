@@ -1,0 +1,13 @@
+{
+  "session_start": "2026-04-19T00:55:52.179310",
+  "session_end": "2026-04-19T10:55:52.180205",
+  "duration_hours": 10.000000245,
+  "symbol": "AAPL",
+  "strategy": "sma_crossover",
+  "initial_capital": 10000.0,
+  "final_portfolio_value": 10000.0,
+  "total_return_pct": 0.0,
+  "total_trades": 0,
+  "total_pnl": 0.0,
+  "iterations": 20
+}
